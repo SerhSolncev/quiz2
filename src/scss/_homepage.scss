@@ -1,8 +1,61 @@
 .hero-home {
+    width: 100%;
+    background-color: #faf1e8;
 
+    &__body {
+        width: 58%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 12% 0 80px;
+
+        .section-title {
+            margin: 0 0 60px;
+        }
+
+        .sub-title {
+            max-width: 400px;
+        }
+    }
+
+    &__mid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        margin: 0 0 6.8vw;
+
+        @media(min-width: 1441px) {
+            margin: 0 0 128px;
+
+        }
+    }
+
+    &__pre-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        margin: 0 0 40px;
+    }
+
+    &__bottom {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 16px;
+    }
 }
 
-
+.board-count {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    border-radius: 16px;
+    background-color: #fffdfb;
+    padding: 20px 12px;
+}
 
 // old styles
 
@@ -378,7 +431,6 @@
         }
     }
 }
-
 
 .report-section {
     padding-bottom: 24px;
