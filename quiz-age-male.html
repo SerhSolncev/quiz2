@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+		<title>Document</title>
+		<link rel="stylesheet" href="css/main.css?v=1.9">
+	</head>
+
+	<body>
+		<div class="quiz-wrapper">
+			<div class="quiz-header js-header">
+				<button class="button-back js-button-back">
+					<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M17.5177 1.96166C16.6795 1.12346 15.3205 1.12346 14.4823 1.96166L1.96194 14.482C1.55943 14.8845 1.3333 15.4304 1.3333 15.9997C1.3333 16.5689 1.55943 17.1148 1.96194 17.5174L14.4823 30.0377C15.3205 30.8759 16.6795 30.8759 17.5177 30.0377C18.3559 29.1995 18.3559 27.8405 17.5177 27.0023L8.66136 18.146H28.5203C29.7057 18.146 30.6666 17.1851 30.6666 15.9997C30.6666 14.8143 29.7057 13.8533 28.5203 13.8533H8.66136L17.5177 4.99704C18.3559 4.15884 18.3559 2.79986 17.5177 1.96166Z"/>
+					</svg>
+				</button>
+				<div class="quiz-logo">
+					Logo
+				</div>
+			</div>
+			<div id="quiz-main" class="quiz-block">
+				<div class="quiz-progress">
+					<div class="quiz-progress__line js-progress-line" data-id="first">
+						<span style="width: 25%;"></span>
+					</div>
+					<div class="quiz-progress__line js-progress-line" data-id="second">
+						<span></span>
+					</div>
+					<div class="quiz-progress__line js-progress-line" data-id="third">
+						<span></span>
+					</div>
+					<div class="quiz-progress__line js-progress-line" data-id="four">
+						<span></span>
+					</div>
+				</div>
+
+				<div class="js-append-answer quiz-block__append">
+					<div class="quiz-block__top">
+						<div class="quiz-block__title">
+							What’s your age?
+						</div>
+						<div class="quiz-block__subtitle">
+							We only use it for personalization
+						</div>
+					</div>
+
+					<div class="quiz-block__body">
+						<div class="quiz-block__cards">
+							<div class="selection-item bg-blue js-quiz-picture" data-type="age" data-answer="18-34">
+								<div class="selection-item__img">
+									<img src="img/male.webp" alt="" width="189" height="170">
+								</div>
+								<div class="selection-item__bottom">
+									<div class="selection-item__title">18-34</div>
+									<div class="selection-item__icon">
+										<svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M5.62959 0.894615C5.93439 0.589816 6.42857 0.589816 6.73336 0.894615L11.2862 5.44746C11.4326 5.59383 11.5148 5.79235 11.5148 5.99935C11.5148 6.20635 11.4326 6.40487 11.2862 6.55124L6.73336 11.1041C6.42857 11.4089 5.93439 11.4089 5.62959 11.1041C5.32479 10.7993 5.32479 10.3051 5.62959 10.0003L8.85006 6.77984H1.62863C1.19758 6.77984 0.848145 6.4304 0.848145 5.99935C0.848145 5.5683 1.19758 5.21886 1.62863 5.21886H8.85006L5.62959 1.99839C5.32479 1.69359 5.32479 1.19941 5.62959 0.894615Z"/>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="selection-item bg-blue js-quiz-picture" data-type="age" data-answer="35-49">
+								<div class="selection-item__img">
+									<img src="img/male2.webp" alt="" width="189" height="170">
+								</div>
+								<div class="selection-item__bottom">
+									<div class="selection-item__title">35-49</div>
+									<div class="selection-item__icon">
+										<svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M5.62959 0.894615C5.93439 0.589816 6.42857 0.589816 6.73336 0.894615L11.2862 5.44746C11.4326 5.59383 11.5148 5.79235 11.5148 5.99935C11.5148 6.20635 11.4326 6.40487 11.2862 6.55124L6.73336 11.1041C6.42857 11.4089 5.93439 11.4089 5.62959 11.1041C5.32479 10.7993 5.32479 10.3051 5.62959 10.0003L8.85006 6.77984H1.62863C1.19758 6.77984 0.848145 6.4304 0.848145 5.99935C0.848145 5.5683 1.19758 5.21886 1.62863 5.21886H8.85006L5.62959 1.99839C5.32479 1.69359 5.32479 1.19941 5.62959 0.894615Z"/>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="selection-item bg-blue js-quiz-picture" data-type="age" data-answer="50-64">
+								<div class="selection-item__img">
+									<img src="img/male3.webp" alt="" width="189" height="170">
+								</div>
+								<div class="selection-item__bottom">
+									<div class="selection-item__title">50-64</div>
+									<div class="selection-item__icon">
+										<svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M5.62959 0.894615C5.93439 0.589816 6.42857 0.589816 6.73336 0.894615L11.2862 5.44746C11.4326 5.59383 11.5148 5.79235 11.5148 5.99935C11.5148 6.20635 11.4326 6.40487 11.2862 6.55124L6.73336 11.1041C6.42857 11.4089 5.93439 11.4089 5.62959 11.1041C5.32479 10.7993 5.32479 10.3051 5.62959 10.0003L8.85006 6.77984H1.62863C1.19758 6.77984 0.848145 6.4304 0.848145 5.99935C0.848145 5.5683 1.19758 5.21886 1.62863 5.21886H8.85006L5.62959 1.99839C5.32479 1.69359 5.32479 1.19941 5.62959 0.894615Z"/>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="selection-item bg-blue js-quiz-picture" data-type="age" data-answer="65+">
+								<div class="selection-item__img">
+									<img src="img/male4.webp" alt="" width="189" height="170">
+								</div>
+								<div class="selection-item__bottom">
+									<div class="selection-item__title">65+</div>
+									<div class="selection-item__icon">
+										<svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M5.62959 0.894615C5.93439 0.589816 6.42857 0.589816 6.73336 0.894615L11.2862 5.44746C11.4326 5.59383 11.5148 5.79235 11.5148 5.99935C11.5148 6.20635 11.4326 6.40487 11.2862 6.55124L6.73336 11.1041C6.42857 11.4089 5.93439 11.4089 5.62959 11.1041C5.32479 10.7993 5.32479 10.3051 5.62959 10.0003L8.85006 6.77984H1.62863C1.19758 6.77984 0.848145 6.4304 0.848145 5.99935C0.848145 5.5683 1.19758 5.21886 1.62863 5.21886H8.85006L5.62959 1.99839C5.32479 1.69359 5.32479 1.19941 5.62959 0.894615Z"/>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="quiz-footer">
+						<p>By clicking “Male” or “Female”, you agree to our
+							<a href="#">Terms of Use</a>, <a href="#">Privacy Policy</a>, and <a href="#">Cookie Policy</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	<script type="text/javascript" src="https://mytestpro.com/wp-content/themes/mytestpro/js/jquery.js?ver=3.7.0" id="jquery-js"></script>
+	<script src="js/modules/lazyload.min.js"></script>
+	<script src="js/main.js"></script>
+	</body>
+</html>

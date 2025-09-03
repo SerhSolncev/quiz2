@@ -1,0 +1,68 @@
+$black: #282828;
+$white: #fff;
+
+$gray_1: #f2f2f3;
+$gray_2: #e3e3e3;
+$gray_3: #9c9fa2;
+
+$green_light: #b3ff00;
+$primary: #969EFF;
+$blue_secondary: #50a3e9;
+
+$system_red: #ff3a3a;
+
+$hover_dark: #1a1a1a;
+$hover_green: #30e66c;
+
+.fc-primary {
+    color: $primary;
+}
+
+.fc-secondary {
+    color: $blue_secondary;
+}
+
+.fc-white {
+    color: $white;
+}
+
+.fc-black {
+    color: $black;
+}
+
+.fc-gray-2 {
+    color: $gray_2;
+}
+
+.fc-gray-3 {
+    color: $gray_3
+}
+
+// background
+.bg-green {
+    background-color: $primary;
+}
+
+.bg-gray {
+    background-color: $gray_1;
+}
+
+.bg-blue {
+    background-color: $blue_secondary;
+}
+
+.bg-black {
+    background-color: $black;
+}
+
+.bg-white {
+    background-color: $white;
+}
+
+// borders
+.border-black {
+    border: 1px solid $black;
+}
+
+
+

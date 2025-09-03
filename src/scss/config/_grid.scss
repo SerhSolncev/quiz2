@@ -1,0 +1,57 @@
+$container           : container;
+
+$break_xxxl_container : 1792px;
+
+$break_xxl           : 1880px;
+$break_xxl_container : 1272px;
+
+$break_xl            : 1759px;
+$break_xl_container  : 1272px;
+
+$break_lg            : 1439px;
+$break_lg_container  : 1144px;
+
+$break_md            : 1143px;
+$break_md_container  : 768px;
+
+$break_sm            : 767px;
+$break_sm_container  : 100%;
+
+$break_xm            : 560px;
+
+$break_xs            : 413px;
+$break_xs_container  : 100%;
+
+$break_xxs           : 374px;
+$break_xxs_container : 100%;
+
+$p: 64px;
+$pXl : 60px;
+$pLg : 60px;
+$pMd : 16px;
+$pSm : 16px;
+
+// hide - show
+.mdHide {
+  @include md {
+    display : none !important;
+  }
+}
+
+.mdShow {
+  @include mdm {
+    display : none !important;
+  }
+}
+
+.smHide {
+  @include sm {
+    display : none !important;
+  }
+}
+
+.smShow {
+  @include smm {
+    display : none !important;
+  }
+}

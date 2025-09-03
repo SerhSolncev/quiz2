@@ -1,0 +1,67 @@
+body {
+  font-family: Manrope, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+svg {
+  vertical-align: middle;
+}
+
+h1, .h1 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+}
+
+h2, .h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h3, .h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.text-small {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.rounded {
+  border-radius: 24px;
+}
+
+.round {
+  border-radius: 50%;
+}

@@ -1,0 +1,5 @@
+.md-none {
+    @media(min-width: $break_md) {
+        display: none;
+    }
+}

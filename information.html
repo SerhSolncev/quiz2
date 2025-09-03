@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+		<title>Document</title>
+		<link rel="stylesheet" href="css/plugins/choises.min.css">
+		<link rel="stylesheet" href="css/main.css?v=1.9">
+	</head>
+
+	<body>
+		<div class="quiz-wrapper">
+			<div class="quiz-header quiz-header--sec js-header js-header">
+				<div class="quiz-logo">
+					Logo
+				</div>
+				<div class="menu md-none">
+					<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M2.46341 4.99983C1.65521 4.99983 1 5.655 1 6.46325C1 7.27149 1.65521 7.92666 2.46341 7.92666H29.5366C30.3448 7.92666 31 7.27149 31 6.46325C31 5.655 30.3448 4.99983 29.5366 4.99983H2.46341ZM6.60135 14.512C5.79314 14.512 5.13793 15.1672 5.13793 15.9754C5.13793 16.7837 5.79314 17.4389 6.60135 17.4389H25.3987C26.2069 17.4389 26.8621 16.7837 26.8621 15.9754C26.8621 15.1672 26.2069 14.512 25.3987 14.512H6.60135ZM2.46341 24.0242C1.65521 24.0242 1 24.6794 1 25.4876C1 26.2959 1.65521 26.9511 2.46341 26.9511H29.5366C30.3448 26.9511 31 26.2959 31 25.4876C31 24.6794 30.3448 24.0242 29.5366 24.0242H2.46341Z" fill="#282828"/>
+					</svg>
+				</div>
+			</div>
+			<div id="quiz-main" class="quiz-block">
+
+				<div class="js-append-answer quiz-block__append js-validate-form" data-url="/">
+					<div class="quiz-block__top">
+						<div class="quiz-block__title quiz-block__title--small-mob">
+							Payment completed - please enter <br>
+							your details to get your results
+						</div>
+					</div>
+					<div class="quiz-block__body quiz-block__body--sec">
+							<div class="quiz-form quiz-form--sec">
+									<div class="quiz-form__fields">
+
+										<div class="input-item js-input-wrap">
+											<div class="input-item__body">
+												<input id="name" class="input-item__input" name="name" type="text" placeholder="First name" required />
+											</div>
+											<div class="input-item__text-error">Field is required</div>
+										</div>
+
+										<div class="input-item js-input-wrap">
+											<div class="input-item__body">
+												<input id="last_name" class="input-item__input" name="last_name" type="text" placeholder="Last name" required />
+											</div>
+											<div class="input-item__text-error">Field is required</div>
+										</div>
+
+										<div class="input-item js-input-wrap">
+											<div class="input-item__body">
+												<div class="custom-select">
+													<select class="js-custom-select" data-title="Select your age" required>
+														<option disabled selected></option>
+														<option value="18">18</option>
+														<option value="19">19</option>
+														<option value="20">20</option>
+														<option value="21">21</option>
+														<option value="22">22</option>
+														<option value="23">23</option>
+														<option value="24">24</option>
+														<option value="25">25</option>
+														<option value="26">26</option>
+														<option value="27">27</option>
+														<option value="28">28</option>
+														<option value="29">29</option>
+														<option value="30">30</option>
+														<option value="31">31</option>
+														<option value="32">32</option>
+														<option value="33">33</option>
+														<option value="34">34</option>
+														<option value="35">35</option>
+														<option value="36">36</option>
+														<option value="37">37</option>
+														<option value="38">38</option>
+														<option value="39">39</option>
+														<option value="40">40</option>
+														<option value="41">41</option>
+														<option value="42">42</option>
+														<option value="43">43</option>
+														<option value="44">44</option>
+														<option value="45">45</option>
+														<option value="46">46</option>
+														<option value="47">47</option>
+														<option value="48">48</option>
+														<option value="49">49</option>
+														<option value="50">50</option>
+													</select>
+												</div>
+												<div class="input-item__text-error">Field is required</div>
+											</div>
+										</div>
+										<div class="gender-form">
+												<div class="gender-form__title">Select gender</div>
+												<div class="gender-form__bottom">
+													<div class="icon-radio">
+														<input type="radio" name="gender" value="male" required>
+														<div class="icon-radio__body icon-radio__body--blue">
+															<div class="icon-radio__icon">
+																<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M9.05761 22.9982C7.00451 22.9982 4.95142 22.2152 3.38952 20.6529C1.87556 19.1385 1.04102 17.1255 1.04102 14.9834C1.04102 12.8413 1.87554 10.8282 3.38952 9.31392C4.90351 7.79964 6.91601 6.96484 9.05761 6.96484C11.1992 6.96484 13.2118 7.79957 14.7257 9.31392C16.2396 10.8283 17.0742 12.8413 17.0742 14.9834C17.0742 17.1255 16.2397 19.1386 14.7257 20.6529C13.1637 22.2152 11.1106 22.9982 9.05761 22.9982ZM9.05761 8.44211C7.31101 8.44211 5.66773 9.12172 4.43457 10.3591C3.19753 11.5927 2.51809 13.2363 2.51809 14.9832C2.51809 16.7301 3.19753 18.3739 4.43457 19.6074C6.9862 22.1559 11.133 22.1559 13.6847 19.6074C14.918 18.3737 15.6012 16.7301 15.6012 14.9832C15.6012 13.2363 14.9217 11.5925 13.6847 10.3591C12.4476 9.12559 10.8041 8.44211 9.05761 8.44211Z"/>
+																	<path d="M14.3975 10.4925C14.1596 10.4925 13.9217 10.3992 13.7397 10.2173C13.3758 9.85336 13.3758 9.26088 13.7397 8.89697L21.3676 1.27391C21.7315 0.909999 22.3239 0.909999 22.6879 1.27391C23.0518 1.63782 23.0518 2.23029 22.6879 2.5942L15.0555 10.222C14.8736 10.404 14.6355 10.4925 14.3975 10.4925Z"/>
+																	<path d="M22.0264 9.53566C21.5132 9.53566 21.0934 9.1158 21.0934 8.6026V2.86418H15.3549C14.8417 2.86418 14.4219 2.44431 14.4219 1.93111C14.4219 1.41791 14.8417 0.998047 15.3549 0.998047H22.0264C22.5396 0.998047 22.9595 1.41791 22.9595 1.93111V8.6026C22.9595 9.12046 22.5396 9.53566 22.0264 9.53566Z"/>
+																</svg>
+
+															</div>
+															<div class="icon-radio__text">Male</div>
+														</div>
+														<div class="icon-radio__error">Field is required</div>
+													</div>
+													<div class="icon-radio">
+														<input type="radio" name="gender" value="male" required>
+														<div class="icon-radio__body icon-radio__body--green">
+															<div class="icon-radio__icon">
+																<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M19 8.06948C19 4.17044 15.86 0.998047 12 0.998047C8.14035 0.998047 5 4.17044 5 8.06948C5 11.7026 7.72768 14.7021 11.2222 15.0945V17.498H8.88889C8.45936 17.498 8.11111 17.8495 8.11111 18.2838C8.11111 18.7181 8.45936 19.0695 8.88889 19.0695H11.2222V22.2123C11.2222 22.6466 11.5705 22.998 12 22.998C12.4295 22.998 12.7778 22.6466 12.7778 22.2123V19.0695H15.1111C15.541 19.0695 15.8889 18.7181 15.8889 18.2838C15.8889 17.8495 15.541 17.498 15.1111 17.498H12.7778V15.0946C16.2727 14.7021 19 11.7027 19 8.06948ZM6.55556 8.06948C6.55556 5.03673 8.99788 2.56948 12 2.56948C15.0017 2.56948 17.4444 5.03673 17.4444 8.06948C17.4444 11.1022 15.0017 13.5695 12 13.5695C8.99788 13.5695 6.55556 11.1022 6.55556 8.06948Z"/>
+																</svg>
+
+															</div>
+															<div class="icon-radio__text">Female</div>
+														</div>
+													</div>
+												</div>
+										</div>
+									</div>
+								</div>
+					</div>
+
+					<div class="quiz-footer quiz-footer--sec">
+						<button class="button-arrow green js-next-quizz js-send-form" id="continue-quiz">
+							<span class="label-up">Generate results</span>
+							<span class="label-up">Generate results</span>
+							<span class="button-arrow__icon">
+									<span class="button-arrow__arrow">
+										<img src="img/btn-arrow.svg" alt="" width="64" height="64">
+										<img src="img/btn-arrow.svg" alt="" width="64" height="64">
+									</span>
+							</span>
+						</button>
+						<div class="quiz-footer__text">
+							All data submitted is confidental and it will never be shared with third parties
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<script type="text/javascript" src="https://mytestpro.com/wp-content/themes/mytestpro/js/jquery.js?ver=3.7.0" id="jquery-js"></script>
+	<script src="js/modules/choices.min.js"></script>
+	<script src="js/modules/lazyload.min.js"></script>
+	<script src="js/main.js"></script>
+	</body>
+</html>

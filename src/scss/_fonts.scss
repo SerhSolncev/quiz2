@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-Medium.woff2') format('woff2'),
+    url('../fonts/Manrope-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-ExtraLight.woff2') format('woff2'),
+    url('../fonts/Manrope-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-Light.woff2') format('woff2'),
+    url('../fonts/Manrope-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-Regular.woff2') format('woff2'),
+    url('../fonts/Manrope-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-Bold.woff2') format('woff2'),
+    url('../fonts/Manrope-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope Semi';
+    src: url('../fonts/Manrope-SemiBold.woff2') format('woff2'),
+    url('../fonts/Manrope-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope Extra';
+    src: url('../fonts/Manrope-ExtraBold.woff2') format('woff2'),
+    url('../fonts/Manrope-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: local('/content/fonts/Inter Bold'), local('/content/fonts/Inter-Bold'),
+    url('../fonts/Inter-Bold.woff2') format('woff2'),
+    url('../fonts/Inter-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tilt Warp';
+    src: url('../fonts/TiltWarp-Regular.woff2') format('woff2'),
+    url('../fonts/TiltWarp-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+$font: 'Manrope', Arial, Helvetica, sans-serif;
+$fontSec: 'Manrope Semi', Arial, Helvetica, sans-serif;
+$fontTh: 'Manrope Extra', Arial, Helvetica, sans-serif;
+$fontFour: 'Inter', Arial, Helvetica, sans-serif;
+$fontFive: 'Tilt Warp', Arial, Helvetica, sans-serif;
+
+.text-2 {
+    font-size: 13px;
+    line-height: 1.2;
+
+    @media(min-width: $break_sm) {
+        font-size: 15px;
+    }
+
+    @media(min-width: $break_md) {
+        font-size: 18px;
+    }
+}

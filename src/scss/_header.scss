@@ -1,0 +1,32 @@
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 11px 0;
+    border-bottom: 1px solid transparent;
+    transition: background-color 0.15s ease-in, border-color 0.15s ease-in;
+
+    @media(min-width: $break_md) {
+        padding: 28px 0;
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &.onscroll {
+        background-color: $white;
+        border-color: $gray_1;
+    }
+}
+
+.logo {
+    img {
+        width: auto;
+        height: auto;
+        max-width: 80%;
+    }
+}
