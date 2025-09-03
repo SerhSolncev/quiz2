@@ -18,12 +18,14 @@
     }
 
     &.onscroll {
-        background-color: $white;
+        background-color: #fffdfb;
         border-color: $gray_1;
     }
 }
 
 .logo {
+    font: 600 24px/1 $fontFour;
+
     img {
         width: auto;
         height: auto;

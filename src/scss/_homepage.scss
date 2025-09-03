@@ -1,20 +1,21 @@
 .hero-home {
     width: 100%;
     background-color: #faf1e8;
+    position: relative;
 
     &__body {
+        width: 100%;
+    }
+
+    &__left {
         width: 58%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 12% 0 80px;
+        padding: 14% 0 56px;
 
-        .section-title {
+        > .section-title {
             margin: 0 0 60px;
-        }
-
-        .sub-title {
-            max-width: 400px;
         }
     }
 
@@ -25,9 +26,14 @@
         gap: 16px;
         margin: 0 0 6.8vw;
 
-        @media(min-width: 1441px) {
+        @media(min-width: 1440px) {
             margin: 0 0 128px;
+        }
 
+        .sub-title {
+            text-align: center;
+            max-width: 400px;
+            margin: 0 auto;
         }
     }
 
@@ -45,16 +51,200 @@
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 16px;
     }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    	width: 39%;
+        height: 100%;
+
+    	img {
+    		width: 100%;
+    		height: 100%;
+            object-fit: cover;
+    	}
+    }
+
+    .container {
+        position: initial;
+    }
+}
+
+.formula-block {
+
+    &__top {
+        margin: 0 0 32px;
+
+        span {
+            display: block;
+        }
+    }
+
+    &__body {
+        display: grid;
+        align-items: flex-start;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 16px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: flex-start;
+        grid-gap: 12px;
+        padding: 26px 0 0;
+    }
+}
+
+.formula-item {
+    display: flex;
+    min-height:  274px;
+    height: 100%;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid transparent;
+        border-radius: 16px;
+        padding: 0 7px 4px 12px;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 0 0 8px;
+        width: 56px;
+        height: 64px;
+        border-radius: 0 0 8px 8px;
+        margin: 0 0 9px;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .sub-title {
+        margin: 0 0 10px;
+        min-height: 62px;
+    }
+
+    &--yellow {
+
+        .formula-item {
+
+            &__body {
+                border-color: $yellow;
+            }
+
+            &__icon {
+                background-color: $yellow;
+            }
+        }
+
+    }
+
+    &--green {
+
+        .formula-item {
+
+            &__body {
+                border-color: #30d065;
+            }
+
+            &__icon {
+                background-color: #30d065;
+            }
+        }
+
+    }
+
+    &--red {
+
+        .formula-item {
+
+            &__body {
+                border-color: #f17072;
+            }
+
+            &__icon {
+                background-color: #f17072;
+            }
+        }
+
+    }
+
+    &--purple {
+
+        .formula-item {
+
+            &__body {
+                border-color: #969eff;
+            }
+
+            &__icon {
+                background-color: #969eff;
+            }
+        }
+
+    }
+
+    &--orange {
+
+        .formula-item {
+
+            &__body {
+                border-color: #f49c5d;
+            }
+
+            &__icon {
+                background-color: #f49c5d;
+            }
+        }
+
+    }
+
+    &--blue {
+
+        .formula-item {
+
+            &__body {
+                border-color: #50a3e9;
+            }
+
+            &__icon {
+                background-color: #50a3e9;
+            }
+        }
+
+    }
 }
 
 .board-count {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
     width: 100%;
     border-radius: 16px;
     background-color: #fffdfb;
-    padding: 20px 12px;
+    padding: 25px 12px;
+
+    &--purple {
+        .section-title {
+            color: $primary;
+        }
+    }
+
+    &--orange {
+        .section-title {
+            color: $orange;
+        }
+    }
 }
 
 // old styles
