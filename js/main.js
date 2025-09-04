@@ -25,8 +25,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
   });
 
-
-
   function setCookie(name, value, days) {
     var expires = "";
     if (days) {
@@ -232,7 +230,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   const showElementYX = document.querySelectorAll('.js-light-show');
 
-  if(showElementYX.length > 0) {
+  if (showElementYX.length > 0) {
     gsap.registerPlugin(ScrollTrigger);
 
     showElementYX.forEach((element) => {
@@ -241,6 +239,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       const x = element.dataset.showX ? parseFloat(element.dataset.showX) || 0 : null;
       const y = element.dataset.showY ? parseFloat(element.dataset.showY) || 0 : null;
       const z = element.dataset.showZ ? parseFloat(element.dataset.showZ) || 0.9 : null;
+      const rotate = element.dataset.rotate ? parseFloat(element.dataset.rotate) || 0 : null;
       const start = element.dataset.start || 'top 90%';
       const end = element.dataset.end || 'top 50%';
 
@@ -248,8 +247,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
       if (x !== null) from.x = x;
       if (y !== null) from.y = y;
       if (z !== null) from.scale = z;
+      if (rotate !== null) from.rotate = rotate;
 
-      const to = { opacity: 1, x: 0, y: 0, scale: 1, duration: duration, delay: delay };
+      const to = { opacity: 1, x: 0, y: 0, scale: 1, rotate: 0, duration: duration, delay: delay };
 
       gsap.fromTo(
           element,
@@ -266,6 +266,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       );
     });
   }
+
 
 
   $('.js-energy-progress').each(function() {
@@ -584,6 +585,32 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   sendFormScript();
 
+  // test
+
+  const cards = Array.from(document.querySelectorAll(".js-l-card"));
+  if (!cards.length) return;
+
+  let current = 0;
+
+  function updateClasses() {
+    cards.forEach((card, i) => {
+      card.classList.remove("is-active", "is-mid", "is-prev");
+    });
+
+    const prev = (current + cards.length - 1) % cards.length;
+    const mid = (current + cards.length - 2) % cards.length;
+
+    cards[current].classList.add("is-active");
+    cards[prev].classList.add("is-mid");
+    cards[mid].classList.add("is-prev");
+  }
+
+  updateClasses();
+
+  setInterval(() => {
+    current = (current + 1) % cards.length;
+    updateClasses();
+  }, 3000);
 
   // choises fot select
 
