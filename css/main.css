@@ -2,8 +2,8 @@
   color: #969EFF;
 }
 
-.fc-secondary {
-  color: #50a3e9;
+.fc-orange {
+  color: #f49c5d;
 }
 
 .fc-white {
@@ -1278,6 +1278,19 @@ textarea:-webkit-autofill {
     font-size: 64px;
   }
 }
+.section-title--mid {
+  font-size: 18px;
+}
+@media (min-width: 767px) {
+  .section-title--mid {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1439px) {
+  .section-title--mid {
+    font-size: 32px;
+  }
+}
 .section-title--green {
   color: #969EFF;
 }
@@ -1936,7 +1949,7 @@ textarea:-webkit-autofill {
 .l-cards {
   width: 100%;
   background-color: #faf1e8;
-  padding: 120px 0;
+  padding: 264px 0 150px;
 }
 .l-cards__body {
   width: 100%;
@@ -1947,6 +1960,17 @@ textarea:-webkit-autofill {
   width: 100%;
   position: relative;
   height: 300px;
+}
+.l-cards__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 44px;
+  margin: 43px 0 0;
+}
+.l-cards__bottom .section-title {
+  max-width: 930px;
+  margin: 0 auto;
 }
 
 .l-card {
@@ -1963,11 +1987,11 @@ textarea:-webkit-autofill {
   transform: translateY(20px);
 }
 .l-card.is-prev {
-  transform: translateY(-37%) scale(0.88);
+  transform: translateY(-43%) scale(0.88);
   z-index: 0;
 }
 .l-card.is-mid {
-  transform: translateY(-16%) scale(0.94);
+  transform: translateY(-21%) scale(0.94);
   z-index: 1;
 }
 .l-card.is-active {

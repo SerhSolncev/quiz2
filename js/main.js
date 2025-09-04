@@ -268,6 +268,41 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 
 
+  const tripleCardsFunc = ( () => {
+    const cards = Array.from(document.querySelectorAll(".js-l-card"));
+    if (!cards.length) return;
+
+    let current = 0;
+
+    function updateClasses() {
+      cards.forEach((card, i) => {
+        card.classList.remove("is-active", "is-mid", "is-prev");
+      });
+
+      const prev = (current + cards.length - 1) % cards.length;
+      const mid = (current + cards.length - 2) % cards.length;
+
+      cards[current].classList.add("is-active");
+      cards[prev].classList.add("is-mid");
+      cards[mid].classList.add("is-prev");
+    }
+
+    updateClasses();
+
+    // setInterval(() => {
+    //   current = (current + 1) % cards.length;
+    //   updateClasses();
+    // }, 3000);
+
+  })
+
+  ScrollTrigger.create({
+    trigger: '.js-cards-view',
+    start: 'top 80%',
+    onEnter: () => {
+      tripleCardsFunc();
+    },
+  });
 
   $('.js-energy-progress').each(function() {
     let $this = $(this);
@@ -584,33 +619,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 
   sendFormScript();
-
-  // test
-
-  const cards = Array.from(document.querySelectorAll(".js-l-card"));
-  if (!cards.length) return;
-
-  let current = 0;
-
-  function updateClasses() {
-    cards.forEach((card, i) => {
-      card.classList.remove("is-active", "is-mid", "is-prev");
-    });
-
-    const prev = (current + cards.length - 1) % cards.length;
-    const mid = (current + cards.length - 2) % cards.length;
-
-    cards[current].classList.add("is-active");
-    cards[prev].classList.add("is-mid");
-    cards[mid].classList.add("is-prev");
-  }
-
-  updateClasses();
-
-  setInterval(() => {
-    current = (current + 1) % cards.length;
-    updateClasses();
-  }, 3000);
 
   // choises fot select
 
