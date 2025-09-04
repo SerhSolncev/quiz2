@@ -17,7 +17,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #fffdfb;
+    background-color: #faf1e8;
 
     &::after {
         content: '';
@@ -569,8 +569,8 @@ textarea:-webkit-autofill{
 
 .star-number {
     position: relative;
-    width: 53px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
 
     &__img {
         display: block;
@@ -578,7 +578,7 @@ textarea:-webkit-autofill{
         height: 100%;
     	position: relative;
 
-    	img {
+    	img, svg{
     		position: absolute;
     		top: 0;
     		left: 0;
@@ -594,9 +594,65 @@ textarea:-webkit-autofill{
         left: 50%;
         z-index: 2;
         transform: translate(-50%, -50%);
+        font-family: $fontFive;
         font-size: 24px;
         line-height: 1;
         color: $white;
         font-weight: bold;
+    }
+
+    &--white {
+
+        .star-number {
+
+            &__img {
+                color: $white;
+            }
+
+            &__text {
+                color: $black;
+            }
+        }
+    }
+
+    &--black {
+
+        .star-number {
+
+            &__img {
+                color: $black;
+            }
+
+            &__text {
+                color: $white;
+            }
+        }
+    }
+
+    &--purple {
+
+        .star-number {
+
+            &__img {
+                color: $primary;
+            }
+
+            &__text {
+                color: $white;
+            }
+        }
+    }
+
+    &--orange {
+        .star-number {
+
+            &__img {
+                color: orange;
+            }
+
+            &__text {
+                color: $white;
+            }
+        }
     }
 }

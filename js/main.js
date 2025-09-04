@@ -759,6 +759,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const hoursEl = timer.querySelector('.js-timer-hours');
     const minsEl = timer.querySelector('.js-timer-min');
     const secsEl = timer.querySelector('.js-timer-sec');
+    let interval;
 
     function updateTimer() {
       const now = new Date();
@@ -785,7 +786,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     updateTimer();
-    const interval = setInterval(updateTimer, 1000);
+    interval = setInterval(updateTimer, 1000);
   });
 
 
