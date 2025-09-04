@@ -309,7 +309,7 @@ textarea:-webkit-autofill{
         transition: color 0.15s ease-in;
 
         &:hover {
-            color: $hover_green;
+            color: #e6e8ff;
         }
 
         &:active, &:focus-visible {
@@ -563,6 +563,34 @@ textarea:-webkit-autofill{
             &[href]:hover {
                 border-color: #50a3e9;
             }
+        }
+    }
+}
+
+
+
+.count-info {
+    font-size: 13px;
+    color: $gray_3;
+
+    @media(min-width: $break_sm) {
+        font-size: 18px;
+    }
+
+    &__icon {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        transform: translateY(-2px);
+
+        @media(min-width: $break_md) {
+            width: 24px;
+            height: 24px;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
         }
     }
 }

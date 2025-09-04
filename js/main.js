@@ -289,20 +289,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     updateClasses();
 
-    // setInterval(() => {
-    //   current = (current + 1) % cards.length;
-    //   updateClasses();
-    // }, 3000);
+    setInterval(() => {
+      current = (current + 1) % cards.length;
+      updateClasses();
+    }, 3000);
 
   })
 
-  ScrollTrigger.create({
-    trigger: '.js-cards-view',
-    start: 'top 80%',
-    onEnter: () => {
-      tripleCardsFunc();
-    },
-  });
+  if(document.querySelector('.js-cards-view')) {
+    ScrollTrigger.create({
+      trigger: '.js-cards-view',
+      start: 'top 80%',
+      onEnter: () => {
+        tripleCardsFunc();
+      },
+    });
+  }
+
+
 
   $('.js-energy-progress').each(function() {
     let $this = $(this);
