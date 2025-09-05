@@ -305,6 +305,10 @@ textarea:-webkit-autofill{
         color: $white;
     }
 
+    &--left {
+        text-align: left;
+    }
+
     &[href] {
         transition: color 0.15s ease-in;
 

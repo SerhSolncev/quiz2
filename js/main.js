@@ -268,14 +268,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 
 
-  const tripleCardsFunc = ( () => {
+  const tripleCardsFunc = (() => {
     const cards = Array.from(document.querySelectorAll(".js-l-card"));
     if (!cards.length) return;
 
     let current = 0;
+    let intervalId;
+    let hoverLock = false; // блокировка hover-событий
 
     function updateClasses() {
-      cards.forEach((card, i) => {
+      cards.forEach((card) => {
         card.classList.remove("is-active", "is-mid", "is-prev");
       });
 
@@ -287,25 +289,50 @@ document.addEventListener('DOMContentLoaded', (event) => {
       cards[mid].classList.add("is-prev");
     }
 
-    updateClasses();
+    function startAuto() {
+      stopAuto();
+      intervalId = setInterval(() => {
+        current = (current + 1) % cards.length;
+        updateClasses();
+      }, 3000);
+    }
 
-    setInterval(() => {
-      current = (current + 1) % cards.length;
-      updateClasses();
-    }, 3000);
+    function stopAuto() {
+      if (intervalId) clearInterval(intervalId);
+    }
 
-  })
+    cards.forEach((card, i) => {
+      card.addEventListener("mouseenter", () => {
+        if (hoverLock) return;
+        stopAuto();
+        current = i;
+        updateClasses();
 
-  if(document.querySelector('.js-cards-view')) {
-    ScrollTrigger.create({
-      trigger: '.js-cards-view',
-      start: 'top 80%',
-      onEnter: () => {
-        tripleCardsFunc();
-      },
+        hoverLock = true;
+        setTimeout(() => {
+          hoverLock = false;
+        }, 1000);
+      });
+
+      card.addEventListener("mouseleave", () => {
+        startAuto();
+      });
+
+      // мобилки
+      card.addEventListener("touchstart", () => {
+        stopAuto();
+        current = i;
+        updateClasses();
+      });
+
+      card.addEventListener("touchend", () => {
+        startAuto();
+      });
     });
-  }
 
+    updateClasses();
+    startAuto();
+  })();
 
 
   $('.js-energy-progress').each(function() {
@@ -917,4 +944,70 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 
   document.querySelectorAll("[data-tabs]").forEach(container => new Tabs(container));
+
+  // проявление с буквами
+
+  const animatedBlocks = document.querySelectorAll(".js-animated-text");
+
+  animatedBlocks.forEach(block => {
+    const text = block.textContent.trim();
+    const startColor = block.dataset.startColor || "#aaa";
+    const endColor = block.dataset.endColor || "#000";
+
+    // очищаем текст
+    block.textContent = "";
+
+    // разбиваем на слова
+    const words = text.split(" ");
+    words.forEach((word, wordIndex) => {
+      const wordSpan = document.createElement("span");
+      wordSpan.classList.add("js-animated-word");
+      block.appendChild(wordSpan);
+
+      // разбиваем слово на символы
+      [...word].forEach(char => {
+        const charSpan = document.createElement("span");
+        charSpan.classList.add("js-animate-symbol");
+        charSpan.textContent = char;
+        wordSpan.appendChild(charSpan);
+      });
+
+      // пробел между словами
+      if (wordIndex < words.length - 1) {
+        block.appendChild(document.createTextNode(" "));
+      }
+    });
+
+    const wordsEls = block.querySelectorAll(".js-animated-word");
+
+    // Устанавливаем стартовые стили для символов
+    gsap.set(wordsEls, { display: "inline-block" });
+    gsap.set(block.querySelectorAll(".js-animate-symbol"), {
+      // opacity: 0,
+      // y: 0,
+      color: startColor
+    });
+
+    // Таймлайн с последовательной анимацией слов
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: block,
+        start: "top 80%",
+        once: true
+      }
+    });
+
+    wordsEls.forEach((word) => {
+      const symbols = word.querySelectorAll(".js-animate-symbol");
+      // сначала анимируем все буквы текущего слова
+      tl.to(symbols, {
+        // opacity: 1,
+        // y: 0,
+        color: endColor,
+        stagger: 0.02,   // буква за буквой внутри слова
+        duration: 0.05,
+        // ease: "linear"
+      }, ">"); // запуск сразу после завершения предыдущего слова
+    });
+  });
 })
