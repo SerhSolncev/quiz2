@@ -311,11 +311,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
         hoverLock = true;
         setTimeout(() => {
           hoverLock = false;
-        }, 1000);
+        }, 300);
       });
 
       card.addEventListener("mouseleave", () => {
-        startAuto();
+        // startAuto();
       });
 
       // мобилки
@@ -326,12 +326,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
       });
 
       card.addEventListener("touchend", () => {
-        startAuto();
+        // startAuto();
       });
     });
 
     updateClasses();
-    startAuto();
+    // startAuto();
   })();
 
 
