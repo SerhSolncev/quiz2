@@ -1816,7 +1816,7 @@ textarea:-webkit-autofill {
   flex-direction: column;
   align-items: center;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .hero-home__left {
     width: 58%;
     padding: 12% 0 40px;
@@ -1966,11 +1966,30 @@ textarea:-webkit-autofill {
 .formula-block__pic {
   display: block;
   width: 100%;
-  position: relative;
   height: 0;
-  padding-bottom: 612px;
   animation: spin 180s linear infinite;
   animation-delay: 1s;
+  padding-bottom: 86%;
+  margin: 0 auto;
+}
+@media (min-width: 560px) {
+  .formula-block__pic {
+    padding-bottom: 61%;
+    max-width: 480px;
+  }
+}
+@media (min-width: 1024px) {
+  .formula-block__pic {
+    position: sticky;
+    top: 60px;
+    max-width: 100%;
+    padding-bottom: 100%;
+  }
+}
+@media (min-width: 1280px) {
+  .formula-block__pic {
+    padding-bottom: 612px;
+  }
 }
 .formula-block__pic svg {
   position: absolute;
@@ -1983,15 +2002,35 @@ textarea:-webkit-autofill {
 .formula-block__body {
   display: grid;
   align-items: flex-start;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   grid-gap: 16px;
+}
+@media (min-width: 1024px) {
+  .formula-block__body {
+    grid-template-columns: 0.8fr 1.1fr;
+  }
+}
+@media (min-width: 1200px) {
+  .formula-block__body {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .formula-block__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   align-items: flex-start;
   grid-gap: 12px;
   padding: 26px 0 0;
+}
+@media (min-width: 440px) {
+  .formula-block__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 640px) {
+  .formula-block__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @keyframes spin {
