@@ -657,7 +657,7 @@
 
     span {
         color: #e4d0c1;
-        transition: all 0.25s ease-in;
+        transition: all 0.15s linear;
     }
 
 }
@@ -712,13 +712,10 @@
     }
 
     &__top {
-        border-bottom: 1px solid $gray_2;
-        padding: 0 0 14px;
         margin: 0 0 16px;
 
         @media(min-width: $break_md) {
-            padding: 0 0 33px;
-            margin: 0 0 20px;
+            margin: 0 0 39px;
         }
 
         .section-title {
@@ -734,6 +731,10 @@
             margin: 0;
             padding: 0;
             border: none;
+        }
+
+        .truth-section {
+            margin-bottom: 0;
         }
     }
 
@@ -756,19 +757,19 @@
         margin: 22px 0 0;
 
         @media(min-width: $break_md) {
-            margin: 36px 0 0;
+            margin: 29px 0 0;
         }
+    }
 
-        .h3 {
-            width: 100%;
-            border-bottom: 1px solid $gray_2;
+    &__bottom-top {
+        width: 100%;
+        border-bottom: 1px solid #e4d0c1;
+        padding-bottom: 16px;
+        margin-bottom: 24px;
+
+        @media(min-width: $break_md) {
             padding-bottom: 16px;
-            margin-bottom: 24px;
-
-            @media(min-width: $break_md) {
-                padding-bottom: 26px;
-                margin-bottom: 33px;
-            }
+            margin-bottom: 25px;
         }
     }
 
@@ -794,79 +795,56 @@
     @media(min-width: $break_md) {
         align-items: flex-start;
        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
+        gap: 16px;
+    }
+}
+
+.quot-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background-color: #fffdfb;
+    padding: 7px;
+    border-radius: 16px;
+
+    &__img {
+    	width: 185px;
+    	position: relative;
+    	height: 0;
+    	padding-bottom: 54%;
+        overflow: hidden;
+        border-radius: 16px 0 0 16px;
+        flex-shrink: 0;
+
+    	img {
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    		z-index: 1;
+    		width: 100%;
+    		height: 100%;
+            object-fit: cover;
+    	}
     }
 
-    &__item {
-        background-color: $gray_1;
-        border-radius: 24px;
+    &__icon {
+        width: 24px;
+        height: 24px;
+        margin: 0 0 -2px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__body {
+        width: 100%;
         display: flex;
         flex-direction: column;
-        padding: 16px;
-
-        @media(min-width: $break_md) {
-            padding: 25px 24px;
-
-            &:nth-child(n + 4) {
-                display: none;
-            }
-        }
-
-        &-title {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.3335 3.22232L2.08951 8.46401C3.63514 8.32961 4.86156 8.59842 5.76878 9.27043C6.67599 9.90884 7.2976 10.8329 7.63361 12.0425C7.93602 13.2185 7.98642 14.5625 7.78481 16.0746H1.3335V29.0276H13.7825V15.5705C13.7825 11.1689 12.7409 7.8424 10.6577 5.59116C8.57443 3.30632 5.46637 2.51671 1.3335 3.22232ZM18.2178 3.22232L18.9738 8.46401C20.5194 8.32961 21.7459 8.59842 22.6531 9.27043C23.5603 9.90884 24.1819 10.8329 24.5179 12.0425C24.8203 13.2185 24.8707 14.5625 24.6691 16.0746H18.2178V29.0276H30.6668V15.5705C30.6668 11.1689 29.6252 7.8424 27.542 5.59116C25.4587 3.30632 22.3507 2.51671 18.2178 3.22232Z' fill='%239C9FA2'/%3E%3C/svg%3E%0A");
-            background-repeat: no-repeat;
-            background-position: right top 4px;
-            background-size: 32px 32px;
-            padding-right: 40px;
-            border-bottom: 1px solid #FFFFFF;
-            padding-bottom: 5px;
-
-            @media(min-width: $break_md) {
-                background-size: 40px 40px;
-                background-position: right top 8px;
-                gap: 12px;
-                padding-bottom: 13px;
-            }
-        }
-
-        &-text {
-            padding-top: 8px;
-            font-size: 13px;
-            line-height: 1.3;
-
-            @media(min-width: $break_md) {
-                font-size: 15px;
-                padding-top: 13px;
-            }
-        }
-
-        &-avatar {
-            width: 40px;
-            height: 40px;
-
-            @media(min-width: $break_md) {
-                width: 56px;
-                height: 56px;
-            }
-
-            img {
-                width: 100%;
-                height: 100%;
-            }
-        }
-
-        &-name {
-            font-weight: 700;
-            font-size: 15px;
-            line-height: 1.4;
-
-            @media(min-width: $break_md) {
-                font-size: 18px;
-            }
-        }
+        align-items: flex-start;
+        gap: 14px;
+        padding: 9px 9px 0 0;
     }
 }
 
@@ -875,11 +853,10 @@
     gap: 8px;
     align-items: center;
     justify-content: center;
+    font-family: $fontFive;
 
     &--big {
         font-size: 15px;
-        font-family: $fontSec;
-        font-weight: 600;
 
         @media(min-width: $break_sm) {
             font-size: 18px;
@@ -892,12 +869,14 @@
 
     &--mid {
         font-size: 15px;
-        font-family: $fontSec;
-        font-weight: 600;
 
         @media(min-width: $break_sm) {
             font-size: 18px;
         }
+    }
+
+    &--orange {
+        color: $orange;
     }
 
     &__icon {
@@ -935,6 +914,15 @@
 }
 
 .quizzes-slider {
+    padding: 88px 0;
+    background-color: #fffdfb;
+
+    @media(min-width: $break_md) {
+        padding: 8vw 0;
+    }
+    @media(min-width: $break_xxxl_container) {
+        padding: 151px 0;
+    }
 
     .section-title {
         margin: 0 0 24px;
@@ -1015,7 +1003,7 @@
     }
 
     &__title {
-        font-weight: 700;
+        font-family: $fontFive;
         color: $black;
         font-size: 15px;
         line-height: 1.3;

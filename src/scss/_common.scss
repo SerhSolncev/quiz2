@@ -313,11 +313,11 @@ textarea:-webkit-autofill{
         transition: color 0.15s ease-in;
 
         &:hover {
-            color: #e6e8ff;
+            color: $orange;
         }
 
         &:active, &:focus-visible {
-            color: $primary ;
+            color: $black;
         }
 
         &.disabled {
