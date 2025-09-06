@@ -615,8 +615,13 @@ textarea:-webkit-autofill{
 
 .star-number {
     position: relative;
-    width: 64px;
-    height: 64px;
+    width: 48px;
+    height: 48px;
+
+    @media(min-width: 768px) {
+        width: 64px;
+        height: 64px;
+    }
 
     &__img {
         display: block;
@@ -636,15 +641,19 @@ textarea:-webkit-autofill{
 
     &__text {
         position: absolute;
-        top: calc(50% - 2px);
+        top: 50%;
         left: 50%;
         z-index: 2;
         transform: translate(-50%, -50%);
         font-family: $fontFive;
-        font-size: 24px;
+        font-size: 18px;
         line-height: 1;
         color: $white;
-        font-weight: bold;
+
+        @media(min-width: 768px) {
+            font-size: 24px;
+            top: calc(50% - 1px);
+        }
     }
 
     &--white {

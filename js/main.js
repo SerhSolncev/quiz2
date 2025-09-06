@@ -315,7 +315,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       });
 
       card.addEventListener("mouseleave", () => {
-        // startAuto();
+        startAuto();
       });
 
       // мобилки
@@ -326,12 +326,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
       });
 
       card.addEventListener("touchend", () => {
-        // startAuto();
+        startAuto();
       });
     });
 
     updateClasses();
-    // startAuto();
+    startAuto();
   })();
 
 
