@@ -24,7 +24,15 @@
 }
 
 .logo {
-    font: 600 24px/1 $fontFour;
+    font: 600 16px/1 $fontFour;
+
+    @media(min-width: 768px) {
+        font-size: 20px;
+    }
+
+    @media(min-width: 1200px) {
+        font-size: 24px;
+    }
 
     img {
         width: auto;

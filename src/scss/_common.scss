@@ -266,7 +266,7 @@ textarea:-webkit-autofill{
     color: $black;
     margin: 0;
 
-    @media(min-width: $break_sm) {
+    @media(min-width: $break_md) {
         font-size: 36px;
     }
 
@@ -328,8 +328,12 @@ textarea:-webkit-autofill{
 }
 
 .sub-title {
-    font: 500 18px/1.15 $fontFive;
+    font: 500 15px/1.15 $fontFive;
     color: $black;
+
+    @media(min-width: 1200px) {
+        font-size: 18px;
+    }
 }
 
 .mini-board {
@@ -337,15 +341,25 @@ textarea:-webkit-autofill{
     align-items: center;
     padding: 2px 8px;
     border-radius: 4px;
+    min-height: 24px;
     gap: 6px;
 
     &__text {
-        font: 500 18px/1.15 $fontFive;
+        font: 500 15px/1.15 $fontFive;
+
+        @media(min-width: 1200px) {
+            font-size: 18px;
+        }
     }
 
-    &__icon {
-        width: 24px;
-        height: 24px;
+    &__img {
+        width: 16px;
+        height: 16px;
+
+        @media(min-width: 1200px) {
+            width: 24px;
+            height: 24px
+        }
 
         img {
             width: 100%;
