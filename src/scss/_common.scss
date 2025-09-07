@@ -18,9 +18,9 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #faf1e8;
-    
+
     &.bg-sec {
-        background-color: #fffdfb;
+        background-color: $main-light;
     }
 
     &::after {
@@ -451,6 +451,10 @@ textarea:-webkit-autofill{
     &--red {
         color: #f03636;
     }
+
+    &--orange {
+        color: $orange;
+    }
 }
 
 .mid-label {
@@ -529,11 +533,11 @@ textarea:-webkit-autofill{
         }
     }
 
-    &--empty-green {
-        color: $primary;
+    &--empty-orange {
+        color: $orange;
 
         .mid-label__text {
-            color: $primary;
+            color: $orange;
             font-size: 13px;
             transform: translateY(-1px);
 
@@ -550,7 +554,7 @@ textarea:-webkit-autofill{
     align-items: center;
     width: auto;
     height: 22px;
-    background-color: $gray_1;
+    background-color: $main-light;
     border-radius: 4px;
     padding: 2px;
     transition: border-color 0.15s ease-in;
