@@ -3093,7 +3093,7 @@ textarea:-webkit-autofill {
 }
 
 .quizzes-slider {
-  padding: 88px 0;
+  padding: 60px 0 55px;
   background-color: #fffdfb;
 }
 @media (min-width: 1143px) {
@@ -3142,7 +3142,7 @@ textarea:-webkit-autofill {
   }
 }
 .quizzes-slider .swiper-scrollbar-drag {
-  background-color: #969EFF;
+  background-color: #f49c5d;
   top: -2px;
   height: 8px;
   cursor: pointer;
@@ -3162,19 +3162,24 @@ textarea:-webkit-autofill {
   display: flex;
   flex-direction: column;
   background-color: #f2f2f3;
-  border-radius: 24px;
+  border-radius: 12px;
   padding: 4px;
   width: 100%;
   margin: 0 auto;
   border: 1px solid transparent;
   transition: background-color 0.15s ease-in, border-color 0.15s ease-in;
 }
+@media (min-width: 640px) {
+  .quiz-card {
+    border-radius: 24px;
+  }
+}
 .quiz-card__top {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 12px;
-  padding: 12px 12px 24px 12px;
+  padding: 7px 5px 31px 8px;
 }
 @media (min-width: 1143px) {
   .quiz-card__top {
@@ -3221,12 +3226,13 @@ textarea:-webkit-autofill {
   position: relative;
   height: 0;
   padding-bottom: 71%;
-  border-radius: 22px;
+  border-radius: 0 0 10px 10px;
   overflow: hidden;
 }
 @media (min-width: 767px) {
   .quiz-card__img {
     padding-bottom: 69.4%;
+    border-radius: 22px;
   }
 }
 .quiz-card__img img {
@@ -3569,7 +3575,7 @@ textarea:-webkit-autofill {
 
 .footer {
   background-color: #faf1e8;
-  padding: 41px 0 24px;
+  padding: 36px 0 24px;
   text-align: center;
   border-radius: 16px 16px 0 0;
 }
@@ -3593,9 +3599,9 @@ textarea:-webkit-autofill {
 }
 .footer__logo {
   color: #282828;
+  font-family: "Tilt Warp", Arial, Helvetica, sans-serif;
   font-size: 18px;
-  font-weight: 600;
-  margin: 0 0 25px;
+  margin: 0 0 18px;
 }
 @media (min-width: 767px) {
   .footer__logo {
@@ -3616,7 +3622,7 @@ textarea:-webkit-autofill {
 .footer__menu {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 22px;
   list-style: none;
   padding: 0;
   margin: 0 0 24px;
