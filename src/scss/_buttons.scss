@@ -82,15 +82,16 @@
     .label-up {
         display:flex;
         align-items: center;
-        margin: 0 47px 0 6px;
+        margin: 0 47px 0 0;
         height: 100%;
         position: relative;
-        top: -1px;
+        top: 0;
         transition:0.3s;
         text-align: left;
 
         @media(min-width: $break_md) {
             margin: 0 70px 0 8px;
+            top: -1px;
         }
     }
 
