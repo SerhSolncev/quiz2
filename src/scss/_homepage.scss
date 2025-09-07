@@ -939,7 +939,7 @@
 }
 
 .profile-block {
-    padding: 88px 0;
+    padding: 55px 0;
     background-color: #fffdfb;
 
     @media(min-width: $break_md) {
@@ -953,12 +953,42 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        gap: 80px;
+        flex-direction: column;
+        gap: 32px;
+
+        @media(min-width: 700px) {
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        @media(min-width: 1024px) {
+            gap: 40px;
+        }
+
+        @media(min-width: 1200px) {
+            gap: 80px;
+        }
     }
 
     &__left {
         width: 100%;
-        max-width: 403px;
+        margin: 0 auto;
+
+        @media(min-width: 481px) {
+            max-width: 300px;
+        }
+
+        @media(min-width: 700px) {
+            margin: 0;
+        }
+
+        @media(min-width: 1024px) {
+            max-width: 340px;
+        }
+
+        @media(min-width: 1200px) {
+            max-width: 403px;
+        }
     }
 
     &__right {
@@ -967,28 +997,46 @@
         display: flex;
         flex-direction: column;
         align-self: stretch;
+
+        @media(max-width: 699px) {
+            text-align: center;
+        }
     }
 
-    &__text {
+    &__right-text {
         margin: 0 0 30px;
+
+        @media(max-width: 699px) {
+            margin: 0 0 25px;
+        }
     }
 
     &__bottom {
         display: flex;
         align-items: center;
-        gap: 35px;
+        flex-direction: column;
+        gap: 12px;
         margin: auto 0 0;
+
+        @media(min-width: 1024px) {
+            flex-direction: row;
+            gap: 35px;
+        }
     }
 }
 
 .animated-text {
     font: normal 18px/1.25 $fontFive;
 
-    @media(min-width: $break_sm) {
+    @media(min-width: 640px) {
+        font-size: 20px;
+    }
+
+    @media(min-width: 1024px) {
         font-size: 24px;
     }
 
-    @media(min-width: $break_lg) {
+    @media(min-width: 1280px) {
         font-size: 32px;
     }
 
@@ -1005,24 +1053,57 @@
     background-color: $primary;
     border-radius: 16px;
 
+    @media(max-width: 480px) {
+        display: flex;
+        align-items: flex-start;
+        border-radius: 12px;
+    }
+
     &__body {
+        display: flex;
+        align-self: stretch;
+        flex-direction: column;
         padding: 14px 9px 8px;
+
+        @media(max-width: 480px) {
+            padding: 0 7px 0 13px;
+        }
 
         .section-title {
             margin: 0 0 11px;
+
+            ~ .simple-text {
+                @media(max-width: 480px) {
+                    margin: auto 0 0;
+                }
+            }
         }
     }
 
     .simple-text + .simple-text {
         margin: 9px 0 0;
+
+        @media(max-width: 480px) {
+            margin: 3px 0 0;
+        }
     }
 
     &__pic {
         display: block;
-    	width: 100%;
     	position: relative;
     	height: 0;
-    	padding-bottom: 97.5%;
+        width: 120px;
+    	padding-bottom: 147px;
+        flex-shrink: 0;
+
+        @media(min-width: 360px) {
+            width: 150px;
+        }
+
+        @media(min-width: 481px) {
+            width: 100%;
+            padding-bottom: 97.5%;
+        }
 
     	img {
     		position: absolute;
