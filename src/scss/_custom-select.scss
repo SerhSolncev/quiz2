@@ -46,8 +46,8 @@
 			padding: 0;
 			min-height: 48px;
 			border-radius: 8px;
-			background-color: $white;
-			border: 2px solid $gray_2;
+			background-color: #fffdfb;
+			border: 1px solid transparent;
 			transition: border-color 0.15s ease-in;
 
 			@media(min-width: $break_sm) {
@@ -101,8 +101,8 @@
 		&.is-open {
 
 			.choices__inner {
-				border-color: $black;
-				background-color: $gray_1;
+				border-color: $primary;
+				background-color: #e6e8ff;
 			}
 
 		}
@@ -121,14 +121,14 @@
 		.desktop-device & {
 		    &:hover {
 			    .choices__inner {
-				    border-color: $black;
+				    border-color: $primary;
 			    }
 		    }
 		}
 	}
 
 	.choices__list--dropdown, .choices__list[aria-expanded] {
-		border: 2px solid $black;
+		border: 1px solid $primary;
 		background-color: $white;
 		border-radius: 8px;
 		padding: 5px 14px 12px;
@@ -138,7 +138,7 @@
 
 	.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {
 		color: $black;
-		border-bottom: 2px solid $gray_1;
+		border-top: 1px solid #faf1e8;
 		text-align: center;
 		padding: 12px 12px;
 		transition: color 0.15s ease-in, background-color 0.15s ease-in;
@@ -147,15 +147,15 @@
 			content: '';
 			display: block;
 			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: 1;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: -1;
 			width: 100%;
-			height: 100%;
-			border: 2px solid #000;
+			height: 110%;
+			background-color: #e6e8ff;
 			border-radius: 8px;
 			opacity: 0;
-			background-color: transparent;
 			transition: opacity 0.15s ease-in;
 		}
 
@@ -167,9 +167,16 @@
 	.choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
 		cursor: pointer;
 		background-color: transparent;
+		//background-color: #e6e8ff;
+		//border-radius: 8px;
+		border-color: transparent;
 
 		&::after {
 			opacity: 1;
+		}
+
+		+ .choices__item {
+			border-color: transparent;
 		}
 	}
 

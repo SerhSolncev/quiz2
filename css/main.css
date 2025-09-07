@@ -1029,6 +1029,9 @@ body {
   flex-direction: column;
   background-color: #faf1e8;
 }
+body.bg-sec {
+  background-color: #fffdfb;
+}
 body::after {
   content: "";
   display: block;
@@ -4857,7 +4860,7 @@ textarea:-webkit-autofill {
 }
 .input-item__input:focus {
   border-color: #969EFF;
-  background-color: #fff;
+  background-color: #e6e8ff;
 }
 .input-item__input:focus::placeholder {
   opacity: 0.1;
@@ -5124,10 +5127,10 @@ textarea:-webkit-autofill {
   border-color: #969EFF;
 }
 .icon-radio input:checked ~ .icon-radio__body--blue {
-  background-color: #50a3e9;
+  background-color: #969EFF;
 }
 .icon-radio input:checked ~ .icon-radio__body--green {
-  background-color: #969EFF;
+  background-color: #f49c5d;
 }
 .icon-radio input:checked ~ .icon-radio__body .icon-radio__icon, .icon-radio input:checked ~ .icon-radio__body .icon-radio__text {
   color: #fff;
@@ -5139,7 +5142,7 @@ textarea:-webkit-autofill {
   gap: 4px;
   border: 2px solid transparent;
   border-radius: 8px;
-  background-color: #f2f2f3;
+  background-color: #fffdfb;
   min-width: 128px;
   height: 40px;
   padding: 5px 10px;
@@ -5152,10 +5155,10 @@ textarea:-webkit-autofill {
   }
 }
 .icon-radio__body--blue .icon-radio__icon {
-  color: #50a3e9;
+  color: #969EFF;
 }
 .icon-radio__body--green .icon-radio__icon {
-  color: #969EFF;
+  color: #f49c5d;
 }
 .icon-radio__icon {
   width: 24px;
@@ -5695,8 +5698,8 @@ textarea:-webkit-autofill {
   padding: 0;
   min-height: 48px;
   border-radius: 8px;
-  background-color: #fff;
-  border: 2px solid #e3e3e3;
+  background-color: #fffdfb;
+  border: 1px solid transparent;
   transition: border-color 0.15s ease-in;
 }
 @media (min-width: 767px) {
@@ -5743,8 +5746,8 @@ textarea:-webkit-autofill {
   display: block;
 }
 .custom-select .choices.is-open .choices__inner {
-  border-color: #282828;
-  background-color: #f2f2f3;
+  border-color: #969EFF;
+  background-color: #e6e8ff;
 }
 .custom-select .choices.is-flipped.is-open .choices__inner {
   border-radius: 8px;
@@ -5753,10 +5756,10 @@ textarea:-webkit-autofill {
   padding-top: 14px;
 }
 .desktop-device .custom-select .choices:hover .choices__inner {
-  border-color: #282828;
+  border-color: #969EFF;
 }
 .custom-select .choices__list--dropdown, .custom-select .choices__list[aria-expanded] {
-  border: 2px solid #282828;
+  border: 1px solid #969EFF;
   background-color: #fff;
   border-radius: 8px;
   padding: 5px 14px 12px;
@@ -5765,7 +5768,7 @@ textarea:-webkit-autofill {
 }
 .custom-select .choices__list--dropdown .choices__item, .custom-select .choices__list[aria-expanded] .choices__item {
   color: #282828;
-  border-bottom: 2px solid #f2f2f3;
+  border-top: 1px solid #faf1e8;
   text-align: center;
   padding: 12px 12px;
   transition: color 0.15s ease-in, background-color 0.15s ease-in;
@@ -5774,15 +5777,15 @@ textarea:-webkit-autofill {
   content: "";
   display: block;
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
   width: 100%;
-  height: 100%;
-  border: 2px solid #000;
+  height: 110%;
+  background-color: #e6e8ff;
   border-radius: 8px;
   opacity: 0;
-  background-color: transparent;
   transition: opacity 0.15s ease-in;
 }
 .custom-select .choices__list--dropdown .choices__item:empty, .custom-select .choices__list[aria-expanded] .choices__item:empty {
@@ -5791,9 +5794,13 @@ textarea:-webkit-autofill {
 .custom-select .choices__list--dropdown .choices__item--selectable.is-highlighted, .custom-select .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
   cursor: pointer;
   background-color: transparent;
+  border-color: transparent;
 }
 .custom-select .choices__list--dropdown .choices__item--selectable.is-highlighted::after, .custom-select .choices__list[aria-expanded] .choices__item--selectable.is-highlighted::after {
   opacity: 1;
+}
+.custom-select .choices__list--dropdown .choices__item--selectable.is-highlighted + .choices__item, .custom-select .choices__list[aria-expanded] .choices__item--selectable.is-highlighted + .choices__item {
+  border-color: transparent;
 }
 .custom-select .choices__list[aria-expanded] .choices__item {
   font: 400 15px/1 "Manrope", Arial, Helvetica, sans-serif;
@@ -5838,7 +5845,7 @@ textarea:-webkit-autofill {
 }
 
 .top-timer {
-  background-color: #50a3e9;
+  background-color: #f49c5d;
 }
 .top-timer__body {
   display: flex;
@@ -7001,7 +7008,7 @@ textarea:-webkit-autofill {
 
 .discount-home {
   width: 100%;
-  background-color: #50a3e9;
+  background-color: #f49c5d;
   padding: 37px 0 178px;
   border-radius: 0 0 24px 24px;
 }
@@ -7213,7 +7220,7 @@ textarea:-webkit-autofill {
 .discount-tabs__top {
   display: flex;
   align-items: center;
-  background-color: #f2f2f3;
+  background-color: #faf1e8;
   border-radius: 56px;
   padding: 5px 4px;
 }
@@ -7268,7 +7275,7 @@ textarea:-webkit-autofill {
 }
 .discount-tabs__btn.is-active {
   color: #fff;
-  background-color: #50A3E9;
+  background-color: #f49c5d;
 }
 .discount-tabs__btn.is-active svg {
   display: block;
@@ -7396,7 +7403,7 @@ textarea:-webkit-autofill {
 }
 
 .discount-total {
-  background-color: #f2f2f3;
+  background-color: #faf1e8;
   padding: 15px 12px 18px;
   border-radius: 0 0 40px 40px;
 }

@@ -18,6 +18,10 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #faf1e8;
+    
+    &.bg-sec {
+        background-color: #fffdfb;
+    }
 
     &::after {
         content: '';

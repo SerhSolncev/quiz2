@@ -1,6 +1,6 @@
 .discount-home {
 	width: 100%;
-	background-color: $blue_secondary;
+	background-color: $orange;
 	padding: 37px 0 178px;
 	border-radius: 0 0 24px 24px;
 
@@ -216,7 +216,7 @@
 	&__top {
 		display: flex;
 		align-items: center;
-		background-color: $gray_1;
+		background-color: #faf1e8;
 		border-radius: 56px;
 		padding: 5px 4px;
 	}
@@ -273,7 +273,7 @@
 
 		&.is-active {
 			color: $white;
-			background-color: #50A3E9;
+			background-color: $orange;
 
 			svg {
 				display: block;
@@ -421,7 +421,7 @@
 }
 
 .discount-total {
-	background-color: $gray_1;
+	background-color: #faf1e8;
 	padding: 15px 12px 18px;
 	border-radius: 0 0 40px 40px;
 

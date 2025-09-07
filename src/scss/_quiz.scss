@@ -1299,7 +1299,7 @@
 
         &:focus {
             border-color: $primary;
-            background-color: #fff;
+            background-color: #e6e8ff;
 
             &::placeholder {
                 opacity: 0.1;
@@ -1605,11 +1605,11 @@
         &:checked ~ .icon-radio__body {
 
             &--blue {
-                background-color: $blue_secondary;
+                background-color: $primary;
             }
 
             &--green {
-                background-color: $primary;
+                background-color: $orange;
             }
 
             .icon-radio__icon, .icon-radio__text {
@@ -1625,7 +1625,7 @@
         gap: 4px;
         border: 2px solid transparent;
         border-radius: 8px;
-        background-color: $gray_1;
+        background-color: #fffdfb;
         min-width: 128px;
         height: 40px;
         padding: 5px 10px;
@@ -1638,13 +1638,13 @@
 
         &--blue {
             .icon-radio__icon {
-                color: $blue_secondary;
+                color: $primary;
             }
         }
 
         &--green {
             .icon-radio__icon {
-                color: $primary;
+                color: $orange;
             }
         }
     }
