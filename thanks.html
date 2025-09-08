@@ -10,7 +10,7 @@
 
 	<body>
 		<div class="quiz-wrapper">
-			<div class="quiz-header quiz-header--sec js-header js-header">
+			<div class="quiz-header quiz-header--sec quiz-header--empty js-header js-header">
 				<div class="quiz-logo">
 					Logo
 				</div>
@@ -20,12 +20,16 @@
 					</svg>
 				</div>
 			</div>
-			<div class="thanks-page" style="background-image: url(img/thank-bg.webp)">
+			<div class="thanks-page">
+					<picture class="thanks-page__bg">
+						<source media="(min-width: 480px)" srcset="img/th-bg.webp" type="image/webp">
+						<img src="img/th-bg-mob.webp" alt="" width="1440" height="378">
+					</picture>
 					<div class="container">
 							<div class="thanks-page__body">
 									<div class="section-title section-title--hero section-title--white">Thank you for ordering!</div>
 									<div class="simple-text simple-text--mid simple-text--white">You can easily review and download your results by clicking the links below</div>
-									<a href="#!" download class="button-arrow">
+									<a href="#!" download class="button-arrow button-arrow--white">
 										<span class="label-up">Download results</span>
 										<span class="label-up">Download results</span>
 										<span class="button-arrow__icon">
