@@ -2292,11 +2292,14 @@
 }
 
 .level-block {
-    display: flex;
-    justify-content: space-between;
-    max-width: 795px;
-    margin: 0 auto;
-    gap: 16px;
+
+    &__board {
+        display: flex;
+        justify-content: space-between;
+        max-width: 795px;
+        margin: 0 auto 60px;
+        gap: 16px;
+    }
 
     &__mid {
         width: 100%;
@@ -2311,6 +2314,15 @@
         .sub-title {
             margin: 0 0 8px;
         }
+    }
+
+    &__list {
+        width: 100%;
+        max-width: 1030px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 16px;
     }
 }
 

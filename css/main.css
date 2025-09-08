@@ -5779,11 +5779,11 @@ textarea:-webkit-autofill {
   gap: 17px;
 }
 
-.level-block {
+.level-block__board {
   display: flex;
   justify-content: space-between;
   max-width: 795px;
-  margin: 0 auto;
+  margin: 0 auto 60px;
   gap: 16px;
 }
 .level-block__mid {
@@ -5797,6 +5797,14 @@ textarea:-webkit-autofill {
 }
 .level-block__mid .sub-title {
   margin: 0 0 8px;
+}
+.level-block__list {
+  width: 100%;
+  max-width: 1030px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
 }
 
 .level-progress {
