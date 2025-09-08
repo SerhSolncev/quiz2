@@ -1300,6 +1300,9 @@ textarea:-webkit-autofill {
 .section-title--white {
   color: #fff;
 }
+.section-title--orange {
+  color: #FF6619;
+}
 .section-title--left {
   text-align: left;
 }
@@ -5701,13 +5704,13 @@ textarea:-webkit-autofill {
 }
 @keyframes swing {
   from {
-    transform: rotate(-5deg);
+    transform: rotate(-12deg);
   }
   50% {
-    transform: rotate(5deg);
+    transform: rotate(12deg);
   }
   to {
-    transform: rotate(-5deg);
+    transform: rotate(-12deg);
   }
 }
 .scale-block__svg {
@@ -5719,6 +5722,52 @@ textarea:-webkit-autofill {
 .scale-block__svg svg {
   width: 100%;
   height: 100%;
+}
+
+.scale-bottom {
+  width: 100%;
+  max-width: 611px;
+  margin: -17.5% auto 0;
+  border-top: 1px solid #e4d0c1;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .scale-bottom {
+    margin: -105px auto 0;
+  }
+}
+.scale-bottom .section-title {
+  text-align: left;
+}
+.scale-bottom .sub-title {
+  transform: translateY(10px);
+}
+.scale-bottom__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-right: 1px solid #e4d0c1;
+  padding: 0 16px 0 0;
+}
+@media (max-width: 767px) {
+  .scale-bottom__left {
+    max-width: 110px;
+  }
+}
+.scale-bottom__right {
+  padding: 3px 0 0 16px;
+}
+@media (max-width: 767px) {
+  .scale-bottom__right .simple-text {
+    font-size: 13px;
+  }
+}
+.scale-bottom__left-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
 }
 
 .custom-select .choices[data-type*=select-one]::after {
