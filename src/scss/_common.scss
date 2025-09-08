@@ -342,6 +342,10 @@ textarea:-webkit-autofill{
     @media(min-width: 1200px) {
         font-size: 18px;
     }
+
+    &--white {
+        color: $main-light;
+    }
 }
 
 .mini-board {
@@ -453,7 +457,11 @@ textarea:-webkit-autofill{
     }
 
     &--red {
-        color: #f03636;
+        color: #ff3333;
+    }
+
+    &--green {
+        color: #00aa4e;
     }
 
     &--orange {

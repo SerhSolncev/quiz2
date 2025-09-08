@@ -2290,3 +2290,80 @@
         gap: 17px;
     }
 }
+
+.level-block {
+    display: flex;
+    justify-content: space-between;
+    max-width: 795px;
+    margin: 0 auto;
+    gap: 16px;
+
+    &__mid {
+        width: 100%;
+        border-radius: 8px;
+        background-color: $main-light;
+        padding: 17px 16px;
+
+        > .sub-title, .simple-text {
+            text-align: center;
+        }
+
+        .sub-title {
+            margin: 0 0 8px;
+        }
+    }
+}
+
+.level-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0 0 6px;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    &__line {
+        width: 100%;
+        height: 12px;
+        border-radius: 8px;
+        background-image: linear-gradient(to left, #00aa4e, #95df3d, #ffd919, #ffaf19, #ff6619, #f03636)
+    }
+}
+
+.level-card {
+    width: 128px;
+    padding: 3px;
+    background-color: #9c9da2;
+    border-radius: 8px;
+    flex-shrink: 0;
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: 94px;
+        border-radius: 8px 8px 0 0;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .sub-title {
+        text-align: center;
+        padding: 4px;
+    }
+
+    &--gray {
+        background-color: #9c9da2;
+    }
+
+    &--purp {
+        background-color: $primary;
+    }
+}
