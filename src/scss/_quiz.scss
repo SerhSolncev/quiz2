@@ -2215,11 +2215,15 @@
     .test-arrow {
         transform-origin: center center;
         animation: swing 2s infinite ease-in-out;
+
+        path {
+            transform-origin: center center;
+        }
     }
 
     @keyframes swing {
         from { transform:rotate(-12deg); }
-        50%  { transform:rotate(12deg); }
+        50%  { transform:rotate(0deg); }
         to   { transform:rotate(-12deg); }
     }
 
