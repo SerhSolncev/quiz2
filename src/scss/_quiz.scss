@@ -2488,24 +2488,51 @@
 
 .plan-sec {
     display: flex;
+    flex-direction: column-reverse;
     justify-content: space-between;
-    grid-gap: 40px;
+    grid-gap: 26px;
     align-items: center;
     max-width: 1030px;
     margin: 0 auto;
+
+    @media(min-width: 768px) {
+        flex-direction: row;
+        grid-gap: 40px;
+    }
 
     &__list {
         width: 100%;
         max-width: 507px;
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: 9px;
+
+        @media(min-width: 768px) {
+            gap: 24px;
+        }
     }
 
     &__svg {
-        width: 450px;
-        height: 450px;
+        width: 100%;
+        max-width: 213px;
+        margin: 0 auto;
         flex-shrink: 0;
+
+        @media(min-width: 560px) {
+            max-width: 320px;
+        }
+
+        @media(min-width: 768px) {
+            max-width: 100%;
+            width: 360px;
+            height: 360px;
+            margin: 0;
+        }
+
+        @media(min-width: 1024px) {
+            width: 450px;
+            height: 450px;
+        }
 
         @media(min-width: 1440px) {
             transform: translateX(24px);
@@ -2521,15 +2548,25 @@
 .plan-itm {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 7px;
     border-bottom: 1px solid transparent;
     width: 100%;
-    padding: 0 0 7px;
+    padding: 0 0 9px;
+
+    @media(min-width: 768px) {
+        gap: 12px;
+        padding: 0 0 7px;
+    }
 
     &__icon {
-        width: 24px;
-        height: 24px;
+        width: 16px;
+        height: 16px;
         flex-shrink: 0;
+
+        @media(min-width: 768px) {
+            width: 24px;
+            height: 24px;
+        }
 
         img {
             width: 100%;
@@ -2541,17 +2578,29 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font: 500 15px/1 $font;
+        font: 500 13px/1 $font;
         color: $black;
         flex-shrink: 0;
-        padding: 0 8px;
-        height: 24px;
+        padding: 0 6px;
+        height: 20px;
         border-radius: 16px;
         margin-left: auto;
+
+        @media(min-width: 768px) {
+            font-size: 15px;
+            height: 24px;
+            padding: 0 8px;
+        }
     }
 
     .sub-title {
         max-width: 317px;
+
+        span {
+            @media(max-width: 767px) {
+                display: none;
+            }
+        }
     }
 
     &--yellow {
