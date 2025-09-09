@@ -1617,11 +1617,11 @@
 }
 
 .report-author {
-    border-bottom: 1px solid #E3E3E3;
+    border-bottom: 1px solid #e4d0c1;
     padding: 15px 0 12px;
 
     @media(min-width: $break_md) {
-        border-top: 1px solid #E3E3E3;
+        border-top: 1px solid #e4d0c1;
         padding: 35px 2px;
 
         .text-2 {
@@ -1666,11 +1666,10 @@
     &__body {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
 
         @media(min-width: $break_md) {
             justify-content: flex-start;
-            gap: 8px;
+            gap: 2px;
             padding: 4px 0 0;
         }
 
@@ -1692,7 +1691,7 @@
     }
 
     &__name {
-        font-weight: 700;
+        font-family: $fontFive;
         font-size: 18px;
         color: $black;
 
