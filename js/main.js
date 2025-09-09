@@ -1013,8 +1013,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   // картки при скролі
 
-  const cards = gsap.utils.toArray(".js-scroll-cards");
-  const spacer = 0;
+  const cards = gsap.utils.toArray(".js-scroll-card");
+  const topHeight = document.querySelector('.js-scroll-cards-top-block').offsetHeight
+  const spacer = 5;
   const minScale = 0.8;
 
   const distributor = gsap.utils.distribute({ base: minScale, amount: 0.2 });
@@ -1037,9 +1038,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     ScrollTrigger.create({
       trigger: card,
-      start: `top-=${index * spacer} top`,
+      start: `top-=${index * spacer + 32 + topHeight} top`,
       endTrigger: '.js-scroll-cards-wrap',
-      end: `bottom top+=${card.offsetHeight + (cards.length * spacer)}`,
+      end: `bottom top+=${card.offsetHeight + (cards.length * spacer) + topHeight}`,
       pin: true,
       pinSpacing: false,
       markers: false,
@@ -1047,7 +1048,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
       invalidateOnRefresh: true,
     });
   });
-
-
 
 })

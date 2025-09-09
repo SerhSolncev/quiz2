@@ -970,9 +970,8 @@
 		text-align: center;
 		min-width: 103px;
 		color: $gray_3;
-		font-family: $fontSec;
+		font-family: $fontFive;
 		font-size: 15px;
-		font-weight: 600;
 		padding: 10px 17px;
 		height: 32px;
 		position: relative;
@@ -1015,7 +1014,7 @@
 		&.is-active {
 			justify-content: space-between;
 			color: $white;
-			background-color: #50A3E9;
+			background-color: $orange;
 
 			svg {
 				display: block;
@@ -1024,7 +1023,7 @@
 
 		.desktop-device & {
 			&:hover:not(.is-active) {
-				color: #50a3e9;
+				color: $orange;
 			}
 		}
 	}
@@ -1077,7 +1076,7 @@
 		align-items: center;
 		gap: 6px;
 		font-size: 15px;
-		background-color: #ebfff2;
+		background-color: #FAF1E8;
 		border-radius: 24px;
 		height: 24px;
 		padding: 4px 11px;
@@ -1135,7 +1134,7 @@
 			width: 4px;
 			height: 4px;
 			border-radius: 100%;
-			background-color: $blue_secondary;
+			background-color: $primary;
 			margin: 0 5px 0 -1px;
 
 			@media(min-width: 768px) {
@@ -1298,14 +1297,14 @@
 	}
 
 	&__top {
-		padding: 40px 0 30px;
+		padding: 40px 0 10px;
 
 		@media(min-width: 768px) {
-			padding: 60px 0;
+			padding: 60px 0 40px;
 		}
 
 		@media(min-width: 1200px) {
-			padding: 104px 0;
+			padding: 104px 0 80px;
 		}
 	}
 
@@ -1321,6 +1320,11 @@
 		max-width: 612px;
 		margin: 0 auto 0;
 		text-align: center;
+		position: sticky;
+		z-index: 2;
+		top: 0;
+		background-color: $primary;
+		padding: 20px 0;
 
 		.h2 {
 			color: $white;
@@ -1344,7 +1348,7 @@
 	padding: 4px;
 	border-radius: 16px;
 	background-color: #e6e8ff;
-	box-shadow: 0 16px 32px rgba(#2b221a, 0.16);
+	box-shadow: 0 16px 24px rgba(#2b221a, 0.16);
 	margin: 0 auto;
 
 	@media(min-width: 340px) {
