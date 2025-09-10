@@ -1049,4 +1049,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
   });
 
+
+  // cente slider
+
+  document.querySelectorAll('.js-center-swiper').forEach((el) => {
+    const parent = el.closest('.js-swiper-wrapper-block');
+    const nextBtn = parent.querySelector('.js-swiper-next');
+    const prevBtn = parent.querySelector('.js-swiper-prev');
+
+    new Swiper(el, {
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      spaceBetween: 12,
+      loop: true,
+      navigation: {
+        nextEl: nextBtn,
+        prevEl: prevBtn,
+      },
+    });
+  });
+
+
 })

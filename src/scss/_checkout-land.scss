@@ -67,8 +67,10 @@
 .checkout-home {
 	display: grid;
 	grid-template-columns: 1fr;
+	padding: 0 0 25px;
 
 	@media(min-width: 560px) {
+		padding: 0;
 		grid-template-columns: repeat(2, 1fr);
 	}
 
@@ -76,7 +78,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 23% 0;
+		padding: 10% 0 7%;
 
 		@media(min-width: 560px) {
 			padding: 10% 0;
@@ -90,9 +92,17 @@
 	&__img {
 		display: block;
 		width: 100%;
+		max-width: 271px;
 		position: relative;
 		height: 0;
-		padding-bottom: 71.7%;
+		padding-bottom: 188px;
+		margin: 0 auto;
+
+		@media(min-width: 560px) {
+			padding-bottom: 71.7%;
+			max-width: 100%;
+			margin: 0;
+		}
 
 		@media(min-width: 1560px) {
 			padding-bottom: 60.7%;
@@ -532,27 +542,28 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 10px;
+		gap: 13px;
 
 		@media(min-width: 768px) {
 			gap: 22px;
+		}
+
+		.section-title {
+			@media(max-width: 559px) {
+				font-size: 24px;
+			}
 		}
 	}
 
 	&__body {
 		margin: 20px 0 0;
-		display: grid;
-		align-items: flex-start;
-		grid-template-columns: 1fr;
-		grid-gap: 20px;
-
-		@media(min-width: 768px) {
-			grid-template-columns: 1fr 1.3fr;
-			margin: 30px 0 0;
-		}
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 20px;
 
 		@media(min-width: 768px) {
 			display: flex;
+			flex-direction: row;
 			align-items: flex-start;
 			margin: 27px 0 0;
 			gap: 24px;
@@ -568,11 +579,7 @@
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		gap: 8px;
-
-		@media(min-width: 768px) {
-			gap: 12px;
-		}
+		gap: 12px;
 
 		.get-item {
 			@media(min-width: 768px) {
@@ -654,17 +661,20 @@
 			}
 		}
 
-
 	}
 
 	&__pic {
-		display: block;
 		width: 100%;
 		max-width: 344px;
 		margin: 0 auto;
 		position: relative;
 		height: auto;
 		flex-shrink: 0;
+		display: none;
+
+		@media(min-width: 768px) {
+			display: block;
+		}
 
 		img {
 			z-index: 1;
@@ -678,19 +688,19 @@
 	width: 100%;
 	display: flex;
 	align-items: center;
-	gap: 16px;
+	gap: 13px;
 	padding: 4px;
 	border-radius: 8px;
 	background-color: #fffdfb;
 
+	@media(min-width: 560px) {
+		gap: 16px;
+	}
+
 	&__title {
-		font-size: 15px;
+		font-size: 18px;
 		line-height: 1.3;
 		font-family: $fontFive;
-
-		@media(min-width: 768px) {
-			font-size: 18px;
-		}
 
 		@media(min-width: 1200px) {
 			font-size: 20px;
@@ -705,8 +715,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 60px;
-		height: 60px;
+		width: 56px;
+		height: 56px;
 		flex-shrink: 0;
 		border-radius: 8px;
 		background-color: $black;
@@ -1147,7 +1157,11 @@
 
 .home-author {
 	background-color: $main-light;
-	padding: 40px 0 0;
+	padding: 22px 0 0;
+
+	@media(min-width: 560px) {
+		padding: 40px 0 0;
+	}
 
 	&__body {
 
@@ -1175,10 +1189,11 @@
 
 		.h3 {
 			text-align: center;
-			line-height: 1.4;
+			line-height: 1.2;
 			margin: 0 0 12px;
 
 			@media(min-width: $break_md) {
+				line-height: 1.4;
 				text-align: left;
 				margin: 0 0 8px;
 				max-width: 446px;
@@ -1237,21 +1252,28 @@
 	max-width: 1240px;
 	margin: 0 auto;
 	position: relative;
+	display: flex;
+	flex-direction: column-reverse;
 
 	&__board {
-		width: 95%;
-		max-width: 560px;
-		position: absolute;
-		bottom: 100px;
-		left: 0;
-		z-index: 2;
+		width: calc(100% - 32px);
+		margin: 12px auto 0;
+		max-width: 100%;
 		background-color: #fffdfb;
-		border-radius: 0 8px 8px 0;
+		border-radius: 16px;
 		padding: 16px;
-		font: 500 16px/1.2 $fontFive;
+		font: 500 18px/1.2 $fontFive;
+		text-align: center;
 
 		@media(min-width: 768px) {
-			font-size: 18px;
+			width: 95%;
+			max-width: 560px;
+			position: absolute;
+			bottom: 100px;
+			margin: 0;
+			left: 0;
+			z-index: 2;
+			text-align: left;
 			padding: 32px 26px;
 			border-radius: 0 16px 16px 0;
 		}
@@ -1266,7 +1288,7 @@
 		width: 100%;
 		position: relative;
 		height: 0;
-		padding-bottom: 480px;
+		padding-bottom: 380px;
 
 		@media(min-width: 768px) {
 			padding-bottom: 600px;
@@ -1290,14 +1312,14 @@
 
 .cards-block {
 	background-color: $primary;
-	padding: 0 0 120px;
+	padding: 0 0 55px;
 
 	@media(min-width: 768px) {
 		padding: 0 0 173px;
 	}
 
 	&__top {
-		padding: 40px 0 10px;
+		padding: 56px 0 0;
 
 		@media(min-width: 768px) {
 			padding: 60px 0 40px;
@@ -1315,26 +1337,44 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 13px;
+		gap: 6px;
 		width: 100%;
 		max-width: 612px;
 		margin: 0 auto 0;
 		text-align: center;
-		position: sticky;
-		z-index: 2;
-		top: 0;
 		background-color: $primary;
-		padding: 20px 0;
+		padding: 13px 0;
+
+		@media(min-width: 560px) {
+			padding: 20px 0;
+			gap: 13px;
+		}
+
+		@media(min-width: 1024px) {
+			position: sticky;
+			z-index: 2;
+			top: 0;
+		}
 
 		.h2 {
 			color: $white;
 		}
+
+		.simple-text {
+			@media(max-width: 559px) {
+			    font-size: 13px;
+			}
+		}
 	}
 
 	&__list {
-		display: flex;
+		display: none;
 		flex-direction: column;
 		position: relative;
+
+		@media(min-width: 1024px) {
+			display: flex;
+		}
 
 		.card-itm  {
 			margin: 40px auto 0;
@@ -1342,17 +1382,51 @@
 	}
 }
 
+.cards-swiper {
+	width: calc(100% + 32px);
+	margin: 20px 0 0 -16px;
+
+	@media(min-width: 1024px) {
+		display: none;
+	}
+
+	&__nav {
+		display: flex;
+		justify-content: center;
+		gap: 41px;
+		margin: 24px 0 0;
+	}
+}
+
+.swiper-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 100%;
+	background-color: $orange;
+	color: $black;
+
+	svg {
+		width: 16px;
+		height: 16px;
+
+	}
+}
+
 .card-itm {
-	width: 300px;
-	height: 354px;
+	width: 271px;
+	height: 326px;
 	padding: 4px;
 	border-radius: 16px;
 	background-color: #e6e8ff;
 	box-shadow: 0 16px 24px rgba(#2b221a, 0.16);
 	margin: 0 auto;
 
-	@media(min-width: 340px) {
+	@media(min-width: 1024px) {
 		width: 314px;
+		height: 354px;
 	}
 
 	&__img {
@@ -1368,6 +1442,9 @@
 		img {
 			width: 100%;
 			height: 100%;
+			object-fit: cover;
+			object-position: bottom;
+			transform: translateY(1px);
 		}
 	}
 
@@ -1379,6 +1456,7 @@
 	}
 
 	.sub-title {
+		font-size: 18px;
 		display: -webkit-box;
 		-webkit-line-clamp: 1;
 		-webkit-box-orient: vertical;
@@ -1387,8 +1465,12 @@
 
 	.simple-text {
 		display: -webkit-box;
-		-webkit-line-clamp: 3;
+		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
+
+		@media(min-width: 1024px) {
+			-webkit-line-clamp: 3;
+		}
 	}
 }
