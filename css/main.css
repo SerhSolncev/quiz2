@@ -8518,7 +8518,11 @@ textarea:-webkit-autofill {
 .chart-report__mid {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-columns: 1fr 1.3fr 1fr;
+}
+.chart-report__chart canvas {
+  width: 100% !important;
+  height: auto !important;
 }
 
 .chart-item__icon {
@@ -8549,7 +8553,7 @@ textarea:-webkit-autofill {
   background-color: #f49c5d;
 }
 .chart-item--blue .chart-item__icon {
-  background-color: #50a3e9;
+  background-color: #56adf5;
 }
 
 .report-board {

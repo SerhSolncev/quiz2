@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         fill: true,
         backgroundColor: gradient,
         borderColor: "transparent",
-        borderWidth: 2,
+        borderWidth: 1,
         pointBackgroundColor: [
-          "#ff0000", "#ff9900", "#33cc33", "#3399ff", "#9933ff"
+          "#ffd324", "#30d065", "#f17072", "#969EFF", "#f49c5d", "#56ADF5"
         ],
         pointBorderColor: "#fff",
         pointHoverRadius: 6,
@@ -45,13 +45,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
             display: false
           },
           grid: {
-            color: "rgba(0,0,0,0.3)",
-            borderDash: [2, 4],
-            lineWidth: 1
+            color: "rgba(40,40,40,0.7)",
+            borderDash: [1, 4],
+            lineWidth: 0.5
           },
           angleLines: {
-            color: "rgba(0,0,0,0.4)",
-            borderDash: [2, 4],
+            color: "rgba(40,40,40,0.7)",
+            borderDash: [1, 4],
             lineWidth: 1
           },
           pointLabels: {

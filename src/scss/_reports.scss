@@ -154,7 +154,15 @@
 	&__mid {
 		width: 100%;
 		display: grid;
-		grid-template-columns: 1fr 1.5fr 1fr;
+		grid-template-columns: 1fr 1.3fr 1fr;
+	}
+
+	&__chart {
+
+		canvas {
+			width: 100% !important;
+			height: auto !important;
+		}
 	}
 }
 
@@ -234,7 +242,7 @@
 		.chart-item {
 
 			&__icon {
-				background-color: #50a3e9;
+				background-color: #56adf5;
 			}
 		}
 
