@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     data: {
       labels: labels,
       datasets: [{
-        label: "Оценка",
+        label: "Rating",
         data: rawValues,
         fill: true,
         backgroundColor: gradient,
