@@ -8375,3 +8375,47 @@ textarea:-webkit-autofill {
     line-height: 1.2;
   }
 }
+
+.report-wrap {
+  width: 100%;
+  max-width: 595px;
+  margin: 0 auto;
+  background-color: #f6ebe0;
+  position: relative;
+}
+.report-wrap::after, .report-wrap::before {
+  content: "";
+  background-color: #282828;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  position: absolute;
+  top: 10px;
+  z-index: 1;
+}
+.report-wrap::before {
+  left: 0;
+}
+.report-wrap::after {
+  right: 0;
+}
+
+.report-first {
+  width: 100%;
+}
+.report-first__top {
+  width: 100%;
+}
+
+.report-title {
+  font: 500 30px/1 "Tilt Warp", Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.report-title--big {
+  font-size: 5.05vw;
+}
+@media (min-width: 595px) {
+  .report-title--big {
+    font-size: 30px;
+  }
+}

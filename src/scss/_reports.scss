@@ -1,0 +1,47 @@
+.report-wrap {
+	width: 100%;
+	max-width: 595px;
+	margin: 0 auto;
+	background-color: #f6ebe0;
+	position: relative;
+
+	&::after, &::before {
+		content: '';
+		background-color: #282828;
+		width: 8px;
+		height: 8px;
+		border-radius: 100%;
+		position: absolute;
+		top: 10px;
+		z-index: 1;
+	}
+
+	&::before {
+		left: 0;
+	}
+
+	&::after {
+		right: 0;
+	}
+}
+
+.report-first {
+	width: 100%;
+
+	&__top {
+		width: 100%;
+	}
+}
+
+.report-title {
+	font: 500 30px/1 $fontFive;
+	text-align: center;
+
+	&--big {
+		font-size: 5.05vw;
+
+		@media(min-width: 595px) {
+			font-size: 30px;
+		}
+	}
+}
