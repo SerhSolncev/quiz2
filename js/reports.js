@@ -5,13 +5,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.body.classList.add('loaded');
   }, 500)
 
-  const ctx = document.getElementById('myRadarChart');
-  const rawValues = ctx.dataset.values.split(',').map(Number);
-  const maxValue = Number(ctx.dataset.max) || 30;
-  const labels = ctx.dataset.labels.split(',');
+  const canvas = document.getElementById('myRadarChart');
+  const rawValues = canvas.dataset.values.split(',').map(Number);
+  const maxValue = Number(canvas.dataset.max) || 30;
+  const labels = canvas.dataset.labels.split(',');
 
-  // нормализуем значения к шкале (например, 25/30 = 0.83)
-  const values = rawValues.map(v => v);
+  const ctx = canvas.getContext("2d");
+
+  // градиент для области
+  const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+  gradient.addColorStop(0, "rgba(0, 123, 255, 0.5)");
+  gradient.addColorStop(1, "rgba(255, 100, 50, 0.3)");
 
   new Chart(ctx, {
     type: 'radar',
@@ -19,41 +23,39 @@ document.addEventListener('DOMContentLoaded', (event) => {
       labels: labels,
       datasets: [{
         label: "Оценка",
-        data: values,
+        data: rawValues,
         fill: true,
-        backgroundColor: "rgba(100, 150, 250, 0.3)",
-        borderColor: "rgba(100, 150, 250, 0.8)",
-        pointBackgroundColor: "rgba(255, 100, 50, 0.9)",
+        backgroundColor: gradient,
+        borderColor: "transparent",
+        borderWidth: 2,
+        pointBackgroundColor: [
+          "#ff0000", "#ff9900", "#33cc33", "#3399ff", "#9933ff"
+        ],
         pointBorderColor: "#fff",
-        pointHoverBackgroundColor: "#fff",
-        pointHoverBorderColor: "rgba(255, 100, 50, 1)",
+        pointHoverRadius: 6,
       }]
     },
     options: {
       responsive: true,
       scales: {
         r: {
-          angleLines: {
-            color: "rgba(0,0,0,0.4)",
-            lineWidth: 1
+          min: 0,
+          max: maxValue,
+          ticks: {
+            display: false
           },
           grid: {
             color: "rgba(0,0,0,0.3)",
-            lineWidth: 1,
-            circular: false
+            borderDash: [2, 4],
+            lineWidth: 1
           },
-          min: 0,
-          max: maxValue,   // <-- здесь используем максимум из data-атрибута
-          ticks: {
-            stepSize: Math.round(maxValue / 5), // красиво делим сетку
-            display: false
+          angleLines: {
+            color: "rgba(0,0,0,0.4)",
+            borderDash: [2, 4],
+            lineWidth: 1
           },
           pointLabels: {
             display: false
-            // font: {
-            //   size: 14
-            // },
-            // color: "#333"
           }
         }
       },

@@ -158,6 +158,89 @@
 	}
 }
 
+.chart-item {
+
+	&__icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 28px;
+		height: 28px;
+		border-radius: 4px;
+
+		img {
+			width: 65%;
+			height: 65%;
+		}
+	}
+
+	&--yellow {
+
+		.chart-item {
+
+			&__icon {
+				background-color: $yellow;
+			}
+		}
+
+	}
+
+	&--green {
+
+		.chart-item {
+
+			&__icon {
+				background-color: #30d065;
+			}
+		}
+
+	}
+
+	&--red {
+
+		.chart-item {
+
+			&__icon {
+				background-color: #f17072;
+			}
+		}
+
+	}
+
+	&--purple {
+
+		.chart-item {
+
+			&__icon {
+				background-color: #969eff;
+			}
+		}
+
+	}
+
+	&--orange {
+
+		.chart-item {
+
+			&__icon {
+				background-color: #f49c5d;
+			}
+		}
+
+	}
+
+	&--blue {
+
+		.chart-item {
+
+			&__icon {
+				background-color: #50a3e9;
+			}
+		}
+
+	}
+}
+
 .report-board {
 	display: flex;
 	align-items: center;

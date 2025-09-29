@@ -8521,6 +8521,37 @@ textarea:-webkit-autofill {
   grid-template-columns: 1fr 1.5fr 1fr;
 }
 
+.chart-item__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+}
+.chart-item__icon img {
+  width: 65%;
+  height: 65%;
+}
+.chart-item--yellow .chart-item__icon {
+  background-color: #ffd324;
+}
+.chart-item--green .chart-item__icon {
+  background-color: #30d065;
+}
+.chart-item--red .chart-item__icon {
+  background-color: #f17072;
+}
+.chart-item--purple .chart-item__icon {
+  background-color: #969eff;
+}
+.chart-item--orange .chart-item__icon {
+  background-color: #f49c5d;
+}
+.chart-item--blue .chart-item__icon {
+  background-color: #50a3e9;
+}
+
 .report-board {
   display: flex;
   align-items: center;
