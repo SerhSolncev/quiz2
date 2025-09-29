@@ -8454,6 +8454,73 @@ textarea:-webkit-autofill {
   border-radius: inherit;
 }
 
+.report-second {
+  width: 100%;
+}
+.report-second__top {
+  width: 100%;
+  margin: 31px 0 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+}
+.report-second__top .report-title {
+  max-width: 335px;
+}
+.report-second__top .simple-text {
+  max-width: 360px;
+  font-size: 14px;
+}
+@media (min-width: 595px) {
+  .report-second__top .simple-text {
+    max-width: 420px;
+    font-size: 16px;
+  }
+}
+.report-second__body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+.report-second__img {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 0;
+  padding-bottom: 80.5%;
+  border-radius: 12px;
+}
+.report-second__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.chart-report {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chart-report > .chart-item {
+  max-width: 197px;
+}
+.chart-report__mid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+}
+
 .report-board {
   display: flex;
   align-items: center;
@@ -8572,5 +8639,13 @@ textarea:-webkit-autofill {
 @media (min-width: 595px) {
   .report-title--big {
     font-size: 30px;
+  }
+}
+.report-title--mid {
+  font-size: 4.5vw;
+}
+@media (min-width: 595px) {
+  .report-title--mid {
+    font-size: 22px;
   }
 }
