@@ -46,13 +46,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
           },
           grid: {
             color: "rgba(40,40,40,0.7)",
-            borderDash: [1, 4],
+            borderDash: [5, 5],
             lineWidth: 0.5
           },
           angleLines: {
-            color: "rgba(40,40,40,0.7)",
-            borderDash: [1, 4],
-            lineWidth: 1
+            color: "transparent",
+            lineWidth: 1.5
           },
           pointLabels: {
             display: false
