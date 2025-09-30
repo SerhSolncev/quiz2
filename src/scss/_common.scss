@@ -659,7 +659,19 @@ textarea:-webkit-autofill{
             width: 86px;
             height: 86px;
         }
+
     }
+
+    &--huge {
+        width: 88px;
+        height: 88px;
+
+        @media(min-width: 1280px) {
+            width: 132px;
+            height: 132px;
+        }
+    }
+
 
     &__img {
         display: block;
@@ -688,12 +700,22 @@ textarea:-webkit-autofill{
         line-height: 1;
         color: $white;
 
+        .star-number--huge & {
+            font-size: 28px;
+        }
+
         @media(min-width: 768px) {
             font-size: 24px;
             top: calc(50% - 1px);
 
             .star-number--big & {
                 font-size: 32px;
+            }
+        }
+
+        @media(min-width: 1280px) {
+            .star-number--huge & {
+                font-size: 48px;
             }
         }
     }
@@ -704,6 +726,20 @@ textarea:-webkit-autofill{
 
             &__img {
                 color: $white;
+            }
+
+            &__text {
+                color: $black;
+            }
+        }
+    }
+
+    &--light {
+
+        .star-number {
+
+            &__img {
+                color: #faf1e8;
             }
 
             &__text {

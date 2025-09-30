@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+		<title>Document</title>
+		<link rel="stylesheet" href="css/main.css?v=2.3">
+	</head>
+
+	<body>
+		<div class="quiz-wrapper">
+			<div class="quiz-header js-header">
+				<button class="button-back js-button-back">
+					<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M17.5177 1.96166C16.6795 1.12346 15.3205 1.12346 14.4823 1.96166L1.96194 14.482C1.55943 14.8845 1.3333 15.4304 1.3333 15.9997C1.3333 16.5689 1.55943 17.1148 1.96194 17.5174L14.4823 30.0377C15.3205 30.8759 16.6795 30.8759 17.5177 30.0377C18.3559 29.1995 18.3559 27.8405 17.5177 27.0023L8.66136 18.146H28.5203C29.7057 18.146 30.6666 17.1851 30.6666 15.9997C30.6666 14.8143 29.7057 13.8533 28.5203 13.8533H8.66136L17.5177 4.99704C18.3559 4.15884 18.3559 2.79986 17.5177 1.96166Z"/>
+					</svg>
+				</button>
+				<div class="quiz-logo">
+					Logo
+				</div>
+			</div>
+			<div id="quiz-main" class="quiz-block">
+				<div class="quiz-progress">
+					<div class="quiz-progress__line js-progress-line" data-id="first">
+						<span style="width: 25%;"></span>
+					</div>
+					<div class="quiz-progress__line js-progress-line" data-id="second">
+						<span></span>
+					</div>
+					<div class="quiz-progress__line js-progress-line" data-id="third">
+						<span></span>
+					</div>
+					<div class="quiz-progress__line js-progress-line" data-id="four">
+						<span></span>
+					</div>
+				</div>
+
+				<div class="js-append-answer quiz-block__append">
+					<div class="quiz-block__top">
+						<div class="quiz-block__title quiz-block__title--sec">
+							Where are you right now in your relationships?
+						</div>
+						<div class="quiz-block__subtitle quiz-block__subtitle--full">
+							Choose what fits you right now — we’ll personalize the questions and your plan
+						</div>
+					</div>
+
+					<div class="quiz-block__body">
+						<div class="quiz-block__status">
+							<div class="status-item status-item--orange">
+								<div class="status-item__icon">
+									<svg width="30" height="30" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M19.0374 13.6188C19.4184 13.2378 20.0361 13.2378 20.4171 13.6188L26.1081 19.3098C26.2911 19.4928 26.3939 19.7409 26.3939 19.9997C26.3939 20.2584 26.2911 20.5066 26.1081 20.6895L20.4171 26.3806C20.0361 26.7616 19.4184 26.7616 19.0374 26.3806C18.6564 25.9996 18.6564 25.3819 19.0374 25.0009L23.0629 20.9753H14.0362C13.4973 20.9753 13.0605 20.5385 13.0605 19.9997C13.0605 19.4609 13.4973 19.0241 14.0362 19.0241H23.0629L19.0374 14.9985C18.6564 14.6175 18.6564 13.9998 19.0374 13.6188Z"></path>
+									</svg>
+								</div>
+								<div class="status-item__mid">
+									<div class="status-item__title">Single</div>
+									<div class="simple-text simple-text--mid simple-text--gray">(not in a relationship)</div>
+								</div>
+								<div class="status-item__board">Boost attraction and your dating flow</div>
+							</div>
+							<div class="status-item status-item--orange">
+								<div class="status-item__icon">
+									<svg width="30" height="30" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M19.0374 13.6188C19.4184 13.2378 20.0361 13.2378 20.4171 13.6188L26.1081 19.3098C26.2911 19.4928 26.3939 19.7409 26.3939 19.9997C26.3939 20.2584 26.2911 20.5066 26.1081 20.6895L20.4171 26.3806C20.0361 26.7616 19.4184 26.7616 19.0374 26.3806C18.6564 25.9996 18.6564 25.3819 19.0374 25.0009L23.0629 20.9753H14.0362C13.4973 20.9753 13.0605 20.5385 13.0605 19.9997C13.0605 19.4609 13.4973 19.0241 14.0362 19.0241H23.0629L19.0374 14.9985C18.6564 14.6175 18.6564 13.9998 19.0374 13.6188Z"></path>
+									</svg>
+								</div>
+								<div class="status-item__mid">
+									<div class="status-item__title">In a relationship</div>
+									<div class="simple-text simple-text--mid simple-text--gray">(3+ months)</div>
+								</div>
+								<div class="status-item__board">Bring back spark, closeness, and clear communication</div>
+							</div>
+
+							<div class="status-item status-item--orange">
+								<div class="status-item__icon">
+									<svg width="30" height="30" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M19.0374 13.6188C19.4184 13.2378 20.0361 13.2378 20.4171 13.6188L26.1081 19.3098C26.2911 19.4928 26.3939 19.7409 26.3939 19.9997C26.3939 20.2584 26.2911 20.5066 26.1081 20.6895L20.4171 26.3806C20.0361 26.7616 19.4184 26.7616 19.0374 26.3806C18.6564 25.9996 18.6564 25.3819 19.0374 25.0009L23.0629 20.9753H14.0362C13.4973 20.9753 13.0605 20.5385 13.0605 19.9997C13.0605 19.4609 13.4973 19.0241 14.0362 19.0241H23.0629L19.0374 14.9985C18.6564 14.6175 18.6564 13.9998 19.0374 13.6188Z"></path>
+									</svg>
+								</div>
+								<div class="status-item__mid">
+									<div class="status-item__title">Recently broke up</div>
+									<div class="simple-text simple-text--mid simple-text--gray">(<6 months)</div>
+								</div>
+								<div class="status-item__board">Reset, rebuild, and regain your self-worth</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="quiz-footer">
+						<div class="mid-label mid-label--empty-orange">
+							<div class="mid-label__icon">
+								<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+									<path d="M18.9543 10.7778V7.9258C18.9543 4.10647 15.835 1 11.9999 1C8.16476 1 5.04545 4.10647 5.04545 7.9258V10.7778C3.91738 10.7778 3 11.6914 3 12.8148V20.963C3 22.0864 3.91738 23 5.04545 23H18.9545C20.0826 23 21 22.0864 21 20.963V12.8148C21 11.6914 20.0826 10.7778 18.9545 10.7778H18.9543ZM13.403 20.1483H10.5976L11.0691 17.0989C10.5106 16.7771 10.1302 16.1823 10.1302 15.4927C10.1302 14.464 10.9678 13.6309 11.9997 13.6309C13.0327 13.6309 13.8693 14.465 13.8693 15.4927C13.8693 16.1812 13.4888 16.776 12.9304 17.0989L13.4019 20.1483H13.403ZM16.0908 10.7778H7.90896V7.9258C7.90896 5.67894 9.74373 3.85172 11.9999 3.85172C14.256 3.85172 16.0908 5.67894 16.0908 7.9258V10.7778Z"></path>
+								</svg>
+							</div>
+							<div class="simple-text simple-text--mid simple-text--gray">Your answers are private</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<script type="text/javascript" src="https://mytestpro.com/wp-content/themes/mytestpro/js/jquery.js?ver=3.7.0" id="jquery-js"></script>
+	<script src="js/modules/lazyload.min.js"></script>
+	<script src="js/main.js?v=2.3"></script>
+	</body>
+</html>

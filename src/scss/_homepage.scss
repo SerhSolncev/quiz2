@@ -158,6 +158,9 @@
     }
 
     &__top {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
         margin: 0 0 26px;
 
         @media(min-width: 768px) {
@@ -167,16 +170,22 @@
         span {
             display: block;
         }
+
+        .simple-text {
+            max-width: 600px;
+            margin: 0 auto;
+            font-family: $fontFive;
+            text-align: center;
+        }
     }
 
     &__pic {
         display: block;
     	width: 100%;
     	height: 0;
-        animation: spin 180s linear infinite;
-        animation-delay: 1s;
         padding-bottom: 100%;
         margin: 0 auto;
+        position: relative;
 
         @media(min-width: 560px) {
             padding-bottom: 61%;
@@ -191,31 +200,16 @@
         }
 
         @media(min-width: 1280px) {
-            padding-bottom: 612px;
+            padding-bottom: 560px;
         }
 
-    	svg {
+    	svg, img {
     		position: absolute;
     		top: 0;
     		left: 0;
     		z-index: 1;
     		width: 100%;
     		height: 100%;
-
-            &:nth-child(1) {
-                display: none;
-
-                @media(min-width: 1024px) {
-                    display: block;
-                }
-            }
-
-            &:nth-child(2) {
-
-                @media(min-width: 1024px) {
-                    display: none;
-                }
-            }
     	}
     }
 
@@ -239,11 +233,9 @@
         grid-template-columns: 1fr;
         align-items: flex-start;
         grid-gap: 12px;
-        padding: 16px 0 0;
 
         @media(min-width: 640px) {
             grid-template-columns: repeat(2, 1fr);
-            padding: 26px 0 0;
         }
 
         @media(min-width: 640px) {
@@ -725,9 +717,162 @@
     }
 }
 
+.get-section {
+    padding: 56px 0;
+    background-color: $primary;
+
+    @media(min-width: $break_md) {
+        padding: 8vw 0;
+    }
+    @media(min-width: $break_xxxl_container) {
+        padding: 151px 0;
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 64px;
+        padding: 72px 0 0;
+
+        @media(min-width: 640px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 16px;
+        }
+
+        @media(min-width: 992px) {
+            grid-template-columns: repeat(3, 1fr);
+            padding: 108px 0 0;
+        }
+    }
+}
+
+.get-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 16px;
+    padding: 16px 16px 0;
+    text-align: center;
+
+    @media(min-width: 640px) {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    &:last-child {
+        padding: 16px;
+
+        @media (min-width: 640px) and (max-width: 991px) {
+            grid-column: 1/3;
+            margin: 40px auto 0;
+            max-width: 400px;
+        }
+    }
+
+    &__pic {
+        display: block;
+    	width: 100%;
+    	position: relative;
+    	height: 0;
+    	padding-bottom: 62.5%;
+        margin: auto 0 0;
+
+    	img {
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    		z-index: 1;
+    		width: 100%;
+    		height: 100%;
+    	}
+    }
+
+    .star-number {
+        margin: -62px 0 14px 0;
+
+        @media(min-width: 1280px) {
+            margin: -82px 0 14px 0;
+        }
+
+        &__img {
+            animation: spin 10s linear infinite;
+            animation-play-state: paused;
+        }
+    }
+
+    .section-title {
+        margin: 0 0 12px;
+
+        @media(max-width: 639px) {
+            text-align: center;
+            font-size: 24px;
+        }
+    }
+
+    .simple-text {
+        margin: 0 0 20px;
+
+        @media(min-width: 640px) {
+            margin: 0 0 40px;
+        }
+    }
+
+    &--light {
+        background-color: #faf1e8;
+    }
+
+    &--dark {
+        background-color: $black;
+    }
+
+    &--lightsec {
+        background-color: #e4d0c1;
+    }
+
+    &:hover {
+        .star-number__img {
+            animation-play-state: running;
+        }
+    }
+}
+
+.run-stroke {
+    overflow: hidden;
+    white-space: nowrap;
+    font: 500 28px/1.2 $fontFive;
+    color: #ffffff;
+
+    @media(min-width: $break_md) {
+        font-size: 36px;
+    }
+    @media(min-width: $break_xxxl_container) {
+        font-size: 64px;
+    }
+
+    .run-stroke__body span {
+        display: inline-block;
+    }
+
+    &__body {
+        display: inline-block;
+        animation: marquee 180s linear infinite;
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 .actions-block {
     padding: 56px 0;
     background-color: $main-light;
+    display: none;
 
     @media(min-width: $break_md) {
         padding: 8vw 0;
@@ -840,12 +985,6 @@
 
 .deserve-block {
 
-    @media(min-width: 1024px) {
-        padding: 8vw 0;
-    }
-    @media(min-width: $break_xxxl_container) {
-        padding: 151px 0;
-    }
 
     &__pic-wrap {
         position: relative;
@@ -1434,7 +1573,7 @@
 .quiz-card {
     display: flex;
     flex-direction: column;
-    background-color: $gray_1;
+    background-color: #faf1e8;
     border-radius: 12px;
     padding: 4px;
     width: 100%;
@@ -1451,25 +1590,34 @@
         align-items: flex-start;
         justify-content: space-between;
         gap: 12px;
-        padding: 7px 5px 31px 8px;
+        padding: 22px 5px 22px 8px;
 
         @media(min-width: $break_md) {
-            padding: 12px 12px 36px 12px;
+            padding: 36px 12px;
         }
     }
 
     &__title {
         font-family: $fontFive;
         color: $black;
-        font-size: 15px;
+        font-size: 18px;
         line-height: 1.3;
+        text-align: center;
+        max-width: 307px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 48px;
 
         @media(min-width: $break_sm) {
-            font-size: 19px;
+            font-size: 21px;
+            min-height: 58px;
         }
 
         @media(min-width: $break_md) {
             font-size: 24px;
+            min-height: 64px;
         }
     }
 
@@ -1499,7 +1647,7 @@
         position: relative;
         height: 0;
         padding-bottom: 71%;
-        border-radius: 0 0 10px 10px;
+        border-radius: 10px;
         overflow: hidden;
 
         @media(min-width: $break_sm) {
