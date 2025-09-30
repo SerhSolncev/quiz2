@@ -1,3 +1,28 @@
+@page {
+	size: A4;
+	margin: 0;
+}
+
+@media print {
+	* {
+		-webkit-print-color-adjust: exact !important; /* для Chrome */
+		print-color-adjust: exact !important;        /* для Firefox */
+		color-adjust: exact !important;              /* старый вариант */
+	}
+
+	body {
+		-webkit-print-color-adjust: exact; /* сохраняет цвета */
+		print-color-adjust: exact;
+	}
+}
+
+.print-page {
+	break-after: page;
+	&::before, &::after {
+		display: none;
+	}
+}
+
 .report-wrap {
 	width: 100%;
 	max-width: 595px;
