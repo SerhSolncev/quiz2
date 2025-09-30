@@ -8684,7 +8684,7 @@ textarea:-webkit-autofill {
 }
 .area-item__numb span {
   color: #282828;
-  font-weight: 500;
+  font-weight: 600;
 }
 .area-item__bar {
   width: 110px;
@@ -8822,6 +8822,27 @@ textarea:-webkit-autofill {
 .report-third__top .report-title span {
   display: block;
 }
+.report-third__body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 18px 14px 16px;
+}
+.report-third__body-top {
+  text-align: center;
+}
+.report-third__body-top h2, .report-third__body-top h3, .report-third__body-top h4, .report-third__body-top h5, .report-third__body-top h6 {
+  margin: 0;
+  font: 500 20px/1.4 "Tilt Warp", Arial, Helvetica, sans-serif;
+  color: #282828;
+}
+.report-third__body-top p {
+  font: 400 18px/1.3 "Manrope", Arial, Helvetica, sans-serif;
+  color: #282828;
+}
 .report-third__img {
   display: block;
   width: 100%;
@@ -8838,6 +8859,28 @@ textarea:-webkit-autofill {
   z-index: 1;
   width: 100%;
   height: 100%;
+}
+
+.archetype-block {
+  width: 100%;
+  margin: 30px 0 0;
+}
+
+.archetype-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 127px 1fr;
+  grid-gap: 10px;
+}
+
+.archetype-item {
+  border-radius: 12px;
+}
+.archetype-item--red {
+  background-color: #F17072;
+}
+.archetype-item--orange {
+  background-color: #F49C5D;
 }
 
 .report-table {
