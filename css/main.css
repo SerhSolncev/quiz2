@@ -8863,7 +8863,13 @@ textarea:-webkit-autofill {
 
 .archetype-block {
   width: 100%;
-  margin: 30px 0 0;
+  margin: 15px 0 0;
+}
+.archetype-block__title {
+  margin: 0 0 6px;
+  font: 500 20px/1.4 "Tilt Warp", Arial, Helvetica, sans-serif;
+  color: #282828;
+  text-align: center;
 }
 
 .archetype-row {
@@ -8872,9 +8878,84 @@ textarea:-webkit-autofill {
   grid-template-columns: 127px 1fr;
   grid-gap: 10px;
 }
+.archetype-row + .archetype-row {
+  margin: 8px 0 0;
+}
+.archetype-row__left {
+  font: 400 16px/1.2 "Manrope", Arial, Helvetica, sans-serif;
+  color: #282828;
+}
+.archetype-row__double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.archetype-row__triple {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.archetype-board {
+  border: 1px solid #282828;
+  border-radius: 12px;
+  padding: 7px 7px 2px;
+}
+.archetype-board + .archetype-board {
+  margin: 0 0 0 -1px;
+}
+.archetype-board__dot {
+  width: 6px;
+  height: 6px;
+  background-color: #282828;
+  border-radius: 100%;
+  margin: 0 0 2px;
+}
+.archetype-board__text {
+  font: 400 16px/1.2 "Manrope", Arial, Helvetica, sans-serif;
+  color: #282828;
+}
 
 .archetype-item {
   border-radius: 12px;
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.archetype-item__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 0 10px;
+  width: 100%;
+}
+.archetype-item__top svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.archetype-item__numb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 53px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 30px;
+  font: 400 14px/1 "Manrope", Arial, Helvetica, sans-serif;
+  color: #9C9DA2;
+}
+@media (min-width: 595px) {
+  .archetype-item__numb {
+    font-size: 16px;
+  }
+}
+.archetype-item__numb span {
+  color: #282828;
+  font-weight: 600;
+}
+.archetype-item__title {
+  font: 500 15px/1.2 "Tilt Warp", Arial, Helvetica, sans-serif;
+  color: #fff;
 }
 .archetype-item--red {
   background-color: #F17072;
