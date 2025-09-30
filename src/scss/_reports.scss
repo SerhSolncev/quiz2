@@ -516,6 +516,39 @@
 	}
 }
 
+.report-third {
+
+	&__top {
+		text-align: center;
+		margin: 22px 0 0;
+
+		.report-title  {
+			span {
+				display: block;
+			}
+		}
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		max-width: 361px;
+		position: relative;
+		height: 0;
+		padding-bottom: 37%;
+		margin: 0 auto;
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
 .report-table {
 	width: 100%;
 	background-color: #fffdfb;
@@ -592,6 +625,14 @@
 
 		@media(min-width: 595px) {
 			font-size: 30px;
+		}
+	}
+
+	&--big-sec {
+		font-size: 5.5vw;
+
+		@media(min-width: 595px) {
+			font-size: 28px;
 		}
 	}
 

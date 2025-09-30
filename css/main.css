@@ -8815,6 +8815,31 @@ textarea:-webkit-autofill {
   }
 }
 
+.report-third__top {
+  text-align: center;
+  margin: 22px 0 0;
+}
+.report-third__top .report-title span {
+  display: block;
+}
+.report-third__img {
+  display: block;
+  width: 100%;
+  max-width: 361px;
+  position: relative;
+  height: 0;
+  padding-bottom: 37%;
+  margin: 0 auto;
+}
+.report-third__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
 .report-table {
   width: 100%;
   background-color: #fffdfb;
@@ -8893,6 +8918,14 @@ textarea:-webkit-autofill {
 @media (min-width: 595px) {
   .report-title--big {
     font-size: 30px;
+  }
+}
+.report-title--big-sec {
+  font-size: 5.5vw;
+}
+@media (min-width: 595px) {
+  .report-title--big-sec {
+    font-size: 28px;
   }
 }
 .report-title--mid {
