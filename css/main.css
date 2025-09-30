@@ -8829,7 +8829,7 @@ textarea:-webkit-autofill {
   align-items: center;
   background-color: #fff;
   border-radius: 12px;
-  padding: 18px 14px 16px;
+  padding: 18px 14px 8px;
 }
 .report-third__body-top {
   text-align: center;
@@ -8848,17 +8848,11 @@ textarea:-webkit-autofill {
   width: 100%;
   max-width: 361px;
   position: relative;
-  height: 0;
-  padding-bottom: 37%;
   margin: 0 auto;
 }
 .report-third__img img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .archetype-block {
@@ -8875,8 +8869,13 @@ textarea:-webkit-autofill {
 .archetype-row {
   width: 100%;
   display: grid;
-  grid-template-columns: 127px 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 10px;
+}
+@media (min-width: 595px) {
+  .archetype-row {
+    grid-template-columns: 127px 1fr;
+  }
 }
 .archetype-row + .archetype-row {
   margin: 8px 0 0;
@@ -8892,6 +8891,42 @@ textarea:-webkit-autofill {
 .archetype-row__triple {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+
+.report-bottom {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background-color: #edeeff;
+  border-radius: 8px;
+  margin: 11px 0 0 0;
+  padding: 18px 10px;
+  width: calc(100% + 14px);
+}
+.report-bottom__icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+@media (min-width: 595px) {
+  .report-bottom__icon {
+    width: 55px;
+    height: 55px;
+  }
+}
+.report-bottom__icon img {
+  width: 100%;
+  height: 100%;
+}
+.report-bottom__text {
+  font: 400 14px/1.25 "Open Sans", sans-serif;
+  font-style: italic;
+  color: #666db8;
+}
+@media (min-width: 595px) {
+  .report-bottom__text {
+    font-size: 16px;
+  }
 }
 
 .archetype-board {
