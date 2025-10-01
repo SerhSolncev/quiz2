@@ -619,6 +619,43 @@
             height: auto;
         }
     }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 3px;
+        padding: 25px 12px 10px;
+        background-color: #faf1e8;
+        border-radius: 0 0 12px 12px;
+        margin: -7% 0 0;
+
+        @media(min-width: 768px) {
+            padding: 25px 24px 10px;
+        }
+
+        .simple-text:last-child {
+            width: 100%;
+            border-top: 1px solid #e4d0c1;
+            margin: 12px 0 0;
+            padding: 11px 0 0;
+        }
+    }
+
+    &__title {
+        font-family: $fontFive;
+        font-size: 15px;
+        color: $black;
+
+        @media(min-width: $break_md) {
+            font-size: 18px;
+        }
+
+        @media(min-width: $break_lg) {
+            font-size: 24px;
+        }
+    }
 }
 
 .selection-item {
@@ -963,7 +1000,7 @@
         align-items: center;
         width: 48px;
         height: 48px;
-        border: 1px solid $black;
+        border: 1px solid transparent;
         border-radius: 50%;
         font-size: 18px;
         line-height: 0.9;
@@ -972,6 +1009,7 @@
         margin: 0 0 6px;
         position: relative;
         transition: color 0.15s ease-in;
+        background-color: $white;
 
         @media(min-width: $break_sm) {
             font-size: 24px;
@@ -1117,6 +1155,61 @@
 
 }
 
+
+.steps-bottom {
+    width: 100%;
+    max-width: 612px;
+    border-top: 1px solid #f49c5d;
+    margin: 100px auto 0;
+    padding: 20px 0 0;
+
+    @media(min-width: 768px) {
+        margin: 150px auto 0;
+    }
+
+    .truth-section {
+        max-width: 390px;
+        margin: 0 auto;
+
+        @media(max-width: 1139px) {
+            max-width: 268px;
+        }
+
+        svg {
+            flex-shrink: 0;
+        }
+    }
+
+    &__sec {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+
+        .simple-text--mid {
+            font-family: $fontFive;
+        }
+
+        .section-title {
+            color: #f49c5d;
+
+            @media(min-width: $break_lg) {
+                font-size: 24px;
+            }
+        }
+    }
+
+    &__pics {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 55px;
+            height: 55px;
+        }
+    }
+}
 
 .loading-block {
     display: flex;

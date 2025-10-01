@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+		<title>Document</title>
+		<link rel="stylesheet" href="css/main.css?v=2.3">
+	</head>
+
+	<body>
+		<div class="quiz-wrapper">
+			<div class="quiz-header js-header js-header">
+				<button class="button-back js-button-back">
+					<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M17.5177 1.96166C16.6795 1.12346 15.3205 1.12346 14.4823 1.96166L1.96194 14.482C1.55943 14.8845 1.3333 15.4304 1.3333 15.9997C1.3333 16.5689 1.55943 17.1148 1.96194 17.5174L14.4823 30.0377C15.3205 30.8759 16.6795 30.8759 17.5177 30.0377C18.3559 29.1995 18.3559 27.8405 17.5177 27.0023L8.66136 18.146H28.5203C29.7057 18.146 30.6666 17.1851 30.6666 15.9997C30.6666 14.8143 29.7057 13.8533 28.5203 13.8533H8.66136L17.5177 4.99704C18.3559 4.15884 18.3559 2.79986 17.5177 1.96166Z"/>
+					</svg>
+				</button>
+				<div class="quiz-logo">
+					Logo
+				</div>
+			</div>
+			<div id="quiz-main" class="quiz-block">
+				<div class="quiz-progress">
+					<div class="quiz-progress__line js-progress-line" data-id="first">
+						<span style="width: 25%;"></span>
+					</div>
+					<div class="quiz-progress__line js-progress-line" data-id="second">
+						<span></span>
+					</div>
+					<div class="quiz-progress__line js-progress-line" data-id="third">
+						<span></span>
+					</div>
+					<div class="quiz-progress__line js-progress-line" data-id="four">
+						<span></span>
+					</div>
+				</div>
+
+				<div class="js-append-answer quiz-block__append">
+					<div class="quiz-block__top">
+						<div class="quiz-block__title">
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry?
+						</div>
+						<div class="quiz-block__subtitle quiz-block__subtitle--gray">
+							How much do you agree with this statement?
+						</div>
+					</div>
+
+					<div class="quiz-block__body">
+							<div class="steps-block js-radio-group" data-type="single">
+									<button class="step-circle step-circle--red js-button-radio" data-id="step1">
+											<span class="step-circle__circ">
+												<span>1</span>
+											</span>
+											<span class="step-circle__text">Strongly Disagree</span>
+									</button>
+									<button class="step-circle step-circle--orange js-button-radio" data-id="step1">
+										<span class="step-circle__circ">
+											<span>2</span>
+										</span>
+									</button>
+									<button class="step-circle step-circle--yellow js-button-radio" data-id="step1">
+										<span class="step-circle__circ">
+											<span>3</span>
+										</span>
+										<span class="step-circle__text">Neutral</span>
+									</button>
+									<button class="step-circle step-circle--green js-button-radio" data-id="step1">
+										<span class="step-circle__circ">
+											<span>4</span>
+										</span>
+									</button>
+									<button class="step-circle step-circle--green-sec js-button-radio" data-id="step1">
+										<span class="step-circle__circ">
+											<span>5</span>
+										</span>
+										<span class="step-circle__text">Strongly Agree</span>
+									</button>
+							</div>
+							<div class="steps-bottom">
+								<div class="steps-bottom__sec">
+									<div class="simple-text simple-text--mid simple-text--orange">Created jointly with psychologists and relationship coaches</div>
+									<div class="steps-bottom__pics">
+										<img src="img/empty.gif" data-src="img/chevron1.webp" alt="" width="58" height="58" class="lazy">
+										<img src="img/empty.gif" data-src="img/chevron2.webp" alt="" width="58" height="58" class="lazy">
+										<img src="img/empty.gif" data-src="img/chevron3.webp" alt="" width="58" height="58" class="lazy">
+									</div>
+								</div>
+							</div>
+					</div>
+
+					<div class="quiz-footer quiz-footer--border">
+						<a href="/quiz/" class="button-arrow green js-next-quizz disabled" id="continue-quiz">
+							<span class="label-up">Continue</span>
+							<span class="label-up">Continue</span>
+							<span class="button-arrow__icon">
+							<span class="button-arrow__arrow">
+										<img src="img/btn-arrow.svg" alt="" width="64" height="64">
+										<img src="img/btn-arrow.svg" alt="" width="64" height="64">
+									</span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	<script type="text/javascript" src="https://mytestpro.com/wp-content/themes/mytestpro/js/jquery.js?ver=3.7.0" id="jquery-js"></script>
+	<script src="js/modules/lazyload.min.js"></script>
+	<script src="js/main.js?v=2.3"></script>
+	</body>
+</html>

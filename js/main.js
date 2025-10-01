@@ -1013,41 +1013,41 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   // картки при скролі
 
-  const cards = gsap.utils.toArray(".js-scroll-card");
-  const topHeight = document.querySelector('.js-scroll-cards-top-block').offsetHeight
-  const spacer = 5;
-  const minScale = 0.8;
-
-  const distributor = gsap.utils.distribute({ base: minScale, amount: 0.2 });
-
-  cards.forEach((card, index) => {
-
-    // const scaleVal = distributor(index, cards[index], cards);
-
-    const tween = gsap.to(card, {
-      scrollTrigger: {
-        trigger: card,
-        start: `top top`,
-        scrub: true,
-        markers: false,
-        invalidateOnRefresh: true
-      },
-      ease: "none",
-      // scale: scaleVal
-    });
-
-    ScrollTrigger.create({
-      trigger: card,
-      start: `top-=${index * spacer + 32 + topHeight} top`,
-      endTrigger: '.js-scroll-cards-wrap',
-      end: `bottom top+=${card.offsetHeight + (cards.length * spacer) + topHeight}`,
-      pin: true,
-      pinSpacing: false,
-      markers: false,
-      id: 'pin',
-      invalidateOnRefresh: true,
-    });
-  });
+  // const cards = gsap.utils.toArray(".js-scroll-card");
+  // const topHeight = document.querySelector('.js-scroll-cards-top-block').offsetHeight
+  // const spacer = 5;
+  // const minScale = 0.8;
+  //
+  // const distributor = gsap.utils.distribute({ base: minScale, amount: 0.2 });
+  //
+  // cards.forEach((card, index) => {
+  //
+  //   // const scaleVal = distributor(index, cards[index], cards);
+  //
+  //   const tween = gsap.to(card, {
+  //     scrollTrigger: {
+  //       trigger: card,
+  //       start: `top top`,
+  //       scrub: true,
+  //       markers: false,
+  //       invalidateOnRefresh: true
+  //     },
+  //     ease: "none",
+  //     // scale: scaleVal
+  //   });
+  //
+  //   ScrollTrigger.create({
+  //     trigger: card,
+  //     start: `top-=${index * spacer + 32 + topHeight} top`,
+  //     endTrigger: '.js-scroll-cards-wrap',
+  //     end: `bottom top+=${card.offsetHeight + (cards.length * spacer) + topHeight}`,
+  //     pin: true,
+  //     pinSpacing: false,
+  //     markers: false,
+  //     id: 'pin',
+  //     invalidateOnRefresh: true,
+  //   });
+  // });
 
 
   // cente slider
@@ -1066,6 +1066,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
         nextEl: nextBtn,
         prevEl: prevBtn,
       },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          centeredSlides: false,
+          spaceBetween: 20,
+        },
+        1280: {
+          slidesPerView: 4,
+          centeredSlides: false,
+          spaceBetween: 20,
+        }
+      }
     });
   });
 

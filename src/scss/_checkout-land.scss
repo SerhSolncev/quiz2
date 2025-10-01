@@ -547,12 +547,6 @@
 		@media(min-width: 768px) {
 			gap: 22px;
 		}
-
-		.section-title {
-			@media(max-width: 559px) {
-				font-size: 24px;
-			}
-		}
 	}
 
 	&__body {
@@ -680,6 +674,41 @@
 			z-index: 1;
 			width: 100%;
 			height: auto;
+		}
+	}
+
+	&__pics {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 0;
+
+		@media(min-width: 640px) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 30px;
+		}
+
+		@media(min-width: 992px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+		position: relative;
+		height: 0;
+		flex-shrink: 0;
+		padding-bottom: 146%;
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
 		}
 	}
 }
@@ -1254,6 +1283,14 @@
 	position: relative;
 	display: flex;
 	flex-direction: column-reverse;
+	padding: 60px 0 0;
+
+	@media(min-width: $break_md) {
+		padding: 8vw 0 0;
+	}
+	@media(min-width: $break_xxxl_container) {
+		padding: 151px 0 0;
+	}
 
 	&__board {
 		width: calc(100% - 32px);
@@ -1312,10 +1349,13 @@
 
 .cards-block {
 	background-color: $primary;
-	padding: 0 0 55px;
+	padding: 55px 0;
 
-	@media(min-width: 768px) {
-		padding: 0 0 173px;
+	@media(min-width: $break_md) {
+		padding: 7vw 0;
+	}
+	@media(min-width: $break_xxxl_container) {
+		padding: 130px 0;
 	}
 
 	&__top {
@@ -1350,12 +1390,6 @@
 			gap: 13px;
 		}
 
-		@media(min-width: 1024px) {
-			position: sticky;
-			z-index: 2;
-			top: 0;
-		}
-
 		.h2 {
 			color: $white;
 		}
@@ -1386,8 +1420,12 @@
 	width: calc(100% + 32px);
 	margin: 20px 0 0 -16px;
 
-	@media(min-width: 1024px) {
-		display: none;
+	@media(min-width: 768px) {
+		padding: 0 16px;
+	}
+
+	@media(min-width: 1368px) {
+		padding: 0;
 	}
 
 	&__nav {

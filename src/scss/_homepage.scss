@@ -984,7 +984,14 @@
 }
 
 .deserve-block {
+    padding: 0 0 55px;
 
+    @media(min-width: $break_md) {
+        padding: 0 0 8vw;
+    }
+    @media(min-width: $break_xxxl_container) {
+        padding: 0 0 151px;
+    }
 
     &__pic-wrap {
         position: relative;
