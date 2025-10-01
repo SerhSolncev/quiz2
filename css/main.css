@@ -1967,17 +1967,10 @@ textarea:-webkit-autofill {
   top: 0;
   right: 0;
   z-index: 1;
-  width: 214px;
-  height: 214px;
-  margin: 0 auto 43px;
-  border-radius: 12px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 20px;
   overflow: hidden;
-}
-@media (min-width: 560px) {
-  .hero-home__img-wrap {
-    width: 280px;
-    height: 280px;
-  }
 }
 @media (min-width: 768px) {
   .hero-home__img-wrap {
@@ -1987,18 +1980,18 @@ textarea:-webkit-autofill {
     border-radius: 0;
     margin: 0;
   }
-}
-.hero-home__img-wrap::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  background-color: #969eff;
-  mix-blend-mode: soft-light;
+  .hero-home__img-wrap::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #969eff;
+    mix-blend-mode: soft-light;
+  }
 }
 .hero-home__img {
   width: 100%;
