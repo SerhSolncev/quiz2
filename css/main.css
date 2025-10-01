@@ -9274,7 +9274,7 @@ textarea:-webkit-autofill {
 
 .report-third__top {
   text-align: center;
-  margin: 22px 0 0;
+  margin: 18px 0 0;
 }
 .report-third__top .report-title span {
   display: block;
@@ -9286,7 +9286,7 @@ textarea:-webkit-autofill {
   align-items: center;
   background-color: #fff;
   border-radius: 12px;
-  padding: 18px 14px 8px;
+  padding: 16px 14px 8px;
 }
 .report-third__body-top {
   text-align: center;
@@ -9382,7 +9382,7 @@ textarea:-webkit-autofill {
 }
 @media (min-width: 595px) {
   .report-bottom__text {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 

@@ -520,7 +520,7 @@
 
 	&__top {
 		text-align: center;
-		margin: 22px 0 0;
+		margin: 18px 0 0;
 
 		.report-title  {
 			span {
@@ -536,7 +536,7 @@
 		align-items: center;
 		background-color: $white;
 		border-radius: 12px;
-		padding: 18px 14px 8px;
+		padding: 16px 14px 8px;
 	}
 
 	&__body-top {
@@ -642,7 +642,7 @@
 		color: #666db8;
 
 		@media(min-width: 595px) {
-		    font-size: 16px;
+		    font-size: 15px;
 		}
 	}
 }
